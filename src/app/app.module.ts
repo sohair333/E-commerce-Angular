@@ -11,6 +11,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AuthComponent } from './auth/auth.component';
+import { loadingSpinnerCOmponent } from './shared/loading-spinner/loading-spinner.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+
 
 
 @NgModule({
@@ -21,12 +25,15 @@ import { AuthComponent } from './auth/auth.component';
     ContactUsComponent,
     TestimonialsComponent,
     AboutUsComponent,
-    AuthComponent
+    AuthComponent,
+    loadingSpinnerCOmponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     // FormsModule,
     // HttpModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule

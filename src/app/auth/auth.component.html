@@ -1,1 +1,35 @@
-<p>auth works!</p>
+<div class="row m-5 ">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <div class="alert alert-danger" *ngIf="error">
+            <p> {{ error }}</p>
+        </div>
+        <div *ngIf="isLoading" style="text-align: center;" class="m-5">
+            <app-loading-spinner></app-loading-spinner>
+        </div>
+        <form  #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" class="loginForm m-5">
+            <div class="form-group">
+                <label for="Email">E-Mail</label>
+                <input type="email" id="Email" class="form-control" 
+                ngModel
+                name="email"
+                required
+                email
+                >
+            </div>
+            <div class="form-group my-4">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control"
+                ngModel
+                name="password"
+                required
+                minlength="10">
+            </div>
+            <div class="my-5">
+                <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">
+                {{ isLoginMode ? "Login" : "SignUp " }}</button>
+                |
+                <button class="btn btn-danger" (click)="onSwitchMode()" type="button">Switch to {{ isLoginMode ? 'signUp' :'Login'}}</button>
+            </div>
+        </form>
+    </div>
+</div>

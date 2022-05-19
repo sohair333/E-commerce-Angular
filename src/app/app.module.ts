@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ShopppingCartComponent } from './shoppping-cart/shoppping-cart.component';
+import { BackToTopComponent } from './back-to-top/back-to-top.component';
 
 
 
@@ -31,7 +32,8 @@ import { ShopppingCartComponent } from './shoppping-cart/shoppping-cart.componen
     loadingSpinnerCOmponent,
     HomeComponent,
     PageNotFoundComponent,
-    ShopppingCartComponent
+    ShopppingCartComponent,
+    BackToTopComponent
   ],
   imports: [
     BrowserModule,

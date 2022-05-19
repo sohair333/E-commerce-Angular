@@ -14,6 +14,8 @@ import { AuthComponent } from './auth/auth.component';
 import { loadingSpinnerCOmponent } from './shared/loading-spinner/loading-spinner.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ShopppingCartComponent } from './shoppping-cart/shoppping-cart.component';
 
 
 
@@ -27,7 +29,9 @@ import { HomeComponent } from './home/home.component';
     AboutUsComponent,
     AuthComponent,
     loadingSpinnerCOmponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent,
+    ShopppingCartComponent
   ],
   imports: [
     BrowserModule,

@@ -19,3 +19,7 @@
     transform: scale(1.1);
     transition: all .5s ease;
 }
+.active{
+    background-color: #826f8d;
+    border-radius: 7px;
+}

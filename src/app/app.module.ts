@@ -18,6 +18,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ShopppingCartComponent } from './shoppping-cart/shoppping-cart.component';
 import { BackToTopComponent } from './back-to-top/back-to-top.component';
 
+import { EditeProdustComponent } from './products/EditeProdust/edite-produst.component';
+import { DetailsProductsComponent } from './products/details-products/details-products.component';
+
 
 
 @NgModule({
@@ -33,7 +36,9 @@ import { BackToTopComponent } from './back-to-top/back-to-top.component';
     HomeComponent,
     PageNotFoundComponent,
     ShopppingCartComponent,
-    BackToTopComponent
+    BackToTopComponent,
+    EditeProdustComponent,
+    DetailsProductsComponent
   ],
   imports: [
     BrowserModule,

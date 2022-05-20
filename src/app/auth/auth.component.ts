@@ -9,7 +9,8 @@ import { AuthResponseData, authService } from "./auth.service";
     templateUrl:'./auth.component.html'
 })
 export class  AuthComponent{
-
+  
+   
     isLoginMode= true;
     isLoading = false;
     error !:string  | null ;
@@ -19,6 +20,7 @@ export class  AuthComponent{
         
 
     }
+    
     onSubmit(form :NgForm){
         // console.log(form.value);
         if(!form.valid){

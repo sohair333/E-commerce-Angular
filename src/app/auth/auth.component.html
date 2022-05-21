@@ -1,8 +1,11 @@
 <div class="row m-5 d-flex justify-content-center" >
     <div class="col-xs-12 col-md-7 col-md-offset-3">
-        <div class="alert alert-danger m-5" *ngIf="error">
+        <!-- <div class="alert alert-danger m-5" *ngIf="error">
             <p> {{ error }}</p>
-        </div>
+        </div> -->
+        <app-alert [message]="error"
+         *ngIf="error"
+          (close)="onHandleError()"></app-alert>
         <div *ngIf="isLoading" style="text-align: center;" class="m-5">
             <app-loading-spinner></app-loading-spinner>
         </div>

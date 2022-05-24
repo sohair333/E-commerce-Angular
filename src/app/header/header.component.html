@@ -1,6 +1,6 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
     <div class="container">
-      <a class="navbar-brand" href="#">E - <span>Commerce</span></a>
+      <a class="navbar-brand" href="#">E - <span style="color: darkred;">Commerce &nbsp;🔥</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -13,22 +13,22 @@
             <a class="nav-link" href="#" routerLink="/products">Our Produsts</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#">Reviews</a>
+            <a class="nav-link" href="#" routerLink="/reviews">Reviews</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" href="#" routerLink="/gallery">Gallery</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
             <a class="nav-link" href="#">Room</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#">Testimonials</a>
+            <a class="nav-link" href="#" routerLink="/testimonials">Testimonials</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
             <a class="nav-link" href="#">About Us</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#"routerLink="/contactUs">Contact Us</a>
           </li>
           <li class="nav-item " routerLinkActive="active">
             <a class="nav-link text-danger mx-5 logoutLogo" routerLink="/auth"  href="#" (click)="onLogout()">{{ isAuthenticate ? 'LogOut' :'Login'}}</a>
@@ -41,3 +41,4 @@
     </div>
     
   </nav>
+  <hr>

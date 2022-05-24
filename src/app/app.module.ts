@@ -21,6 +21,8 @@ import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { EditeProdustComponent } from './products/EditeProdust/edite-produst.component';
 import { DetailsProductsComponent } from './products/details-products/details-products.component';
 import { AlertComponent } from './shared/alert/alert.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProductsComponent } from './products/products.component';
 
 
 
@@ -40,7 +42,9 @@ import { AlertComponent } from './shared/alert/alert.component';
     BackToTopComponent,
     EditeProdustComponent,
     DetailsProductsComponent,
-    AlertComponent
+    AlertComponent,
+    FooterComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

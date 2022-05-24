@@ -1,1 +1,160 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fredoka:wght@300;400&family=Indie+Flower&family=Lobster&family=Macondo&family=Ms+Madi&family=Nunito:wght@200;300;400&family=Pacifico&family=Playfair+Display:ital@0;1&family=Poppins:ital,wght@0,200;1,200&family=Redressed&family=Roboto:ital,wght@0,100;0,300;1,300&family=Sansita+Swashed:wght@300&family=Source+Code+Pro:ital,wght@1,300&family=Source+Sans+Pro:ital,wght@0,200;0,400;1,300;1,400&family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fredoka:wght@300;400&family=Indie+Flower&family=Lobster&family=Macondo&family=Ms+Madi&family=Nunito:wght@200;300;400&family=Pacifico&family=Playfair+Display:ital@0;1&family=Poppins:ital,wght@0,200;1,200&family=Redressed&family=Roboto:ital,wght@0,100;0,300;1,300&family=Sansita+Swashed:wght@300&family=Source+Code+Pro:ital,wght@1,300&family=Source+Sans+Pro:ital,wght@0,200;0,400;1,300;1,400&family=Varela&display=swap');
+
+body,html,:root{
+    width: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ac7a48;
+}
+.components{
+    margin-top: 100px !important;
+    
+}
+.first-par{
+    color: white !important;
+    font-family: 'Macondo', cursive;
+    font-size: 22px;
+    margin-left: -80px !important;
+}
+
+.navbar{
+    background-color: #ac7a48 !important;
+    border-bottom: 1px solid rgb(150, 135, 135);
+}
+.img-background{
+    margin-right: -100px;
+    margin-top: -110px;
+}
+.text-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -430px;
+}
+.container .text{
+    position: relative;
+    color: black !important;
+    font-size: 30px;
+    font-weight: 600;
+}
+.container .text.first-text{
+    color: #3e3d3b;
+}
+.text.sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: #ac7a48;
+    border-left: 2px solid #3b312b;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%,60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.order{
+   border: 4px solid darkred;
+   color: white;
+}
+.orderNow:hover{
+    background-color: #251f1b;
+    border-radius: 5px;
+    
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
+}
+.container-testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh !important;
+    /* background: #010615; */
+    flex-wrap: wrap;
+    width: 1200px !important;
+    margin-top: 70px;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 28px;
+
+}
+.container .box .imgBX{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    z-index: 2;
+}
+.container .box:hover .imgBX{
+    transform: translate(-35px ,-35px);
+}
+.container .box .imgBX img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.container .box .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px;
+    transition: .5s ease-in-out;
+}
+.container .box:hover .content{
+    transform: translate(35px ,35px);
+}
+.container .box .content h2{
+    font-size: 20px;
+    color: #111;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    align-items: center;
+} 
+.container .box .content h2 span{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+@media(max-width:768px){
+
+    .container .box:hover .content{
+        transform: translate(0 ,35px);
+    }
+    .container .box:hover .imgBX{
+        transform: translate(0,-35px);
+    }
+
+}
+.testimonials-team-title{
+    margin-top: 70px;
+    margin-bottom: -170px;
+    text-align: center;
+    font-family: 'Macondo', cursive;
+}

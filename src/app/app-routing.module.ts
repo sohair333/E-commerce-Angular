@@ -1,11 +1,16 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthGuard } from './auth/auth.guard';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FilterableProductsComponent } from './filterable-products/filterable-products.component';
 import { HomeComponent } from './home/home.component';
 import { DetailsProductsComponent } from './products/details-products/details-products.component';
 import { EditeProdustComponent } from './products/EditeProdust/edite-produst.component';
 import { ProductsComponent } from './products/products.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 
 const approutes: Routes = [
@@ -17,7 +22,11 @@ const approutes: Routes = [
     {path:':id',component:DetailsProductsComponent},
     {path:':id/edit',component:EditeProdustComponent}
   ],canActivate:[AuthGuard]},
-  {path:'auth',component:AuthComponent}
+  {path:'auth',component:AuthComponent},
+  {path:'testimonials',component:TestimonialsComponent},
+  {path:'contactUs',component:ContactUsComponent},
+  {path:'gallery',component:FilterableProductsComponent},
+  {path:'reviews',component:ReviewsComponent}
 ];
 
 @NgModule({

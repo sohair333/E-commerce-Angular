@@ -19,7 +19,9 @@ body{
     color: white !important;
     font-family: 'Macondo', cursive;
     font-size: 22px;
-    margin-left: -80px !important;
+    /* margin-left: -80px !important; */
+    width: 500px;
+    margin-top: -30px;
 }
 
 .navbar{
@@ -44,6 +46,68 @@ body{
 }
 .container .text.first-text{
     color: #3e3d3b;
+}
+@media (min-width:368px){
+    .img-background{
+        margin-right: -10px;
+        margin-top: 190px;
+        margin-bottom: 40px;
+
+    }
+    .img-background img{
+        width: 400px;
+    }
+    .first-par{
+        width: 300px;
+        margin-left: 0px ;
+        margin-top: -100px;
+    }
+    .text-container{
+       display: none;
+       
+    }
+
+
+}
+@media (min-width:768px){
+    .img-background{
+        margin-right: -70px;
+        margin-top: -10px;
+
+    }
+    .img-background img{
+        width: 400px;
+    }
+    .first-par{
+        width: 400px;
+        margin-left: 0px ;
+        margin-top: -50px;
+    }
+    .text-container{
+        margin-left: -10px;
+        display: flex;
+    }
+
+}
+@media (min-width:992px){
+    .img-background{
+        margin-right: -100px;
+        margin-top: -110px;
+
+    }
+    .img-background img{
+        width: 550px;
+    }
+    .first-par{
+        width: 500px;
+        margin-left: -80px ;
+        margin-top: -30px;
+    }
+    .text-container{
+        margin-left: -430px;
+        display: flex;
+    }
+
 }
 .text.sec-text::before{
     content: "";

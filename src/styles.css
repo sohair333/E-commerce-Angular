@@ -206,6 +206,9 @@ object-fit: cover;
     font-weight: 300;
     letter-spacing: 2px;
 }
+.social-links ul  a svg{
+margin-top: -3px;
+}
 @media(max-width:768px){
 
     .container .box:hover .content{
@@ -221,4 +224,103 @@ object-fit: cover;
     margin-bottom: -170px;
     text-align: center;
     font-family: 'Macondo', cursive;
+}
+
+.foot{
+    margin-top: 120px !important;
+    /* max-width: 1170px; */
+    margin: auto;
+    
+    
+}
+footer ul{
+    list-style: none;
+}
+footer .row{
+display: flex;
+flex-wrap: wrap;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h1{
+   font-size: 25px;
+   margin-top: 50px;
+   color: #fff;
+   text-transform: capitalize;
+   margin-bottom: 30px;
+   font-weight: 500;
+   position: relative;
+}
+.footer-col ul li a{
+  text-decoration: none !important;
+}
+.footer-col h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:  rgb(8, 109, 8);
+    height: 2px;
+    box-sizing: border-box;
+    width: 58px;
+    height: 4px;
+}
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.myName{
+    color:white;
+    font-size: 20px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+    color: #bbb;
+    display: block;
+    transition: all 0.3s ease-in-out;
+
+}
+.footer-col ul li a:hover{
+    color: #FFF;
+    padding-left:7px ;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 30px;
+   
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+   
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.footer-col .social-links a:hover{
+    transform: scale(1.1);
+}
+
+@media(max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+}
+@media(max-width:574px)
+{
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+.rights{
+    color: rgb(12, 204, 12);
+    font-weight: 700;
+    margin-bottom: 20px;
 }

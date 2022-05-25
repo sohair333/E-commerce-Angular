@@ -26,6 +26,10 @@ import { ProductsComponent } from './products/products.component';
 
 
 
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +48,7 @@ import { ProductsComponent } from './products/products.component';
     DetailsProductsComponent,
     AlertComponent,
     FooterComponent,
-    ProductsComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

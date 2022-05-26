@@ -23,11 +23,35 @@ import { DetailsProductsComponent } from './products/details-products/details-pr
 import { AlertComponent } from './shared/alert/alert.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+
+import {MatSelectModule} from '@angular/material/select';
+
+import { AngularFireModule } from '@angular/fire/compat';
+
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 
 
-
-
+const firebaseConfig = {
+  apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
+  authDomain: "e-commerce-website-a5b86.firebaseapp.com",
+  projectId: "e-commerce-website-a5b86",
+  storageBucket: "e-commerce-website-a5b86.appspot.com",
+  messagingSenderId: "993242594375",
+  appId: "1:993242594375:web:c7938a4d4df88bd9850562",
+  measurementId: "G-ZRMMW9T3ZX"
+};
 
 
 @NgModule({
@@ -57,7 +81,14 @@ import { ProductsComponent } from './products/products.component';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     
   ],
   providers: [],

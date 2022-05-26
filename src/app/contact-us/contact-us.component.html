@@ -1,1 +1,39 @@
-<p>contact-us works!</p>
+<h1 class="text-center title-contact-us">Hi! Contact With Us !</h1>
+<div class="container container-contact-us">
+
+<form [formGroup]="contactForm"class="form-group contact-us-form">
+<mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput 
+    formControlName="name"
+    >
+  </mat-form-field>
+
+  <small class="m-2"  *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched ">Name Is Required</small>
+
+  <mat-form-field appearance="fill">
+    <mat-label>E-mail</mat-label>
+    <input matInput
+    formControlName="email">
+  </mat-form-field>
+
+  <small class="m-2"  *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched ">Email  Is Required</small>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select formControlName="subject">
+      <mat-option value="one">Sales Items</mat-option>
+      <mat-option value="two"> Products </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <small class="m-2"  *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched ">Subject Is Required</small>
+  <mat-form-field appearance="fill">
+    <mat-label>Message</mat-label>
+    <textarea matInput
+    formControlName="msg"></textarea>
+  </mat-form-field>
+  <small class="m-2" *ngIf="contactForm.get('msg')?.invalid && contactForm.get('msg')?.touched ">Message Is Required</small>
+  <button type="reset" mat-stroked-button  [disabled]="contactForm.invalid"  color="white" class="bg-danger" (click)="submitData(contactForm.value)">Send Message</button>
+ <p class="m-2" *ngIf="isSubmit">  {{ SubmitMsg }}</p>
+</form>
+</div>

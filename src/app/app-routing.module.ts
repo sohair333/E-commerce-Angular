@@ -26,7 +26,11 @@ const approutes: Routes = [
   {path:'testimonials',component:TestimonialsComponent},
   {path:'contactUs',component:ContactUsComponent},
   {path:'gallery',component:FilterableProductsComponent},
-  {path:'reviews',component:ReviewsComponent}
+  {path:'reviews',component:ReviewsComponent},
+  {path:'shopping-cart',component:ShopppingCartComponent},
+  {path:'order-sucess',component:OrderSuccessComponent},
+  {path:'admin/products',component:AdminProductsComponent},
+  {path:'admin/orders',component:AdminOrdersComponent}
 ];
 
 @NgModule({

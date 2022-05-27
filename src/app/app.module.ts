@@ -41,6 +41,14 @@ import { AngularFireModule } from '@angular/fire/compat';
 
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { CheckOutComponent } from './check-out/check-out.component';
+import { OrderSuccessComponent } from './order-success/order-success.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { AdminProductsComponent } from './Admin/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.component';
+
 
 
 const firebaseConfig = {
@@ -72,7 +80,12 @@ const firebaseConfig = {
     DetailsProductsComponent,
     AlertComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    CheckOutComponent,
+    OrderSuccessComponent,
+    MyOrdersComponent,
+    AdminProductsComponent,
+    AdminOrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +102,8 @@ const firebaseConfig = {
     MatInputModule,
     MatSelectModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
     
   ],
   providers: [],

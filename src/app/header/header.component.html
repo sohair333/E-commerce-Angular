@@ -1,48 +1,53 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
     <div class="container">
-      <a class="navbar-brand" href="#">E - <span>Commerce &nbsp;🔥</span></a>
+      <a class="navbar-brand" routerLink="/">E - <span>Commerce &nbsp;🔥</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item" *ngIf="isAuthenticate"  routerLinkActive="active">
-            <a class="nav-link " aria-current="page" href="#" routerLink="/home">Home</a>
+            <a class="nav-link " aria-current="page"  routerLink="/home">Home</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#" routerLink="/products">Our Produsts</a>
+            <a class="nav-link"  routerLink="/products">Our Produsts</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#" routerLink="/reviews">Reviews</a>
+            <a class="nav-link" routerLink="/reviews">Reviews</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#" routerLink="/gallery">Gallery</a>
+            <a class="nav-link"  routerLink="/gallery">Gallery</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
             <a class="nav-link" href="#">Room</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#" routerLink="/testimonials">Testimonials</a>
+            <a class="nav-link"  routerLink="/testimonials">Testimonials</a>
           </li>
+          <!-- <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
+            <a class="nav-link" >About Us</a>
+          </li> -->
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" routerLink="/contactUs">Contact Us</a>
           </li>
-          <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" href="#"routerLink="/contactUs">Contact Us</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
+          <li ngbDropdown class="nav-item dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle"  style="cursor:pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              UserName
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+            <div ngbDropdownMenu class="dropdown-menu" >
+              <a class="dropdown-item"  routerLink="/my/orders">My Orders</a>
+              <a class="dropdown-item"  routerLink="/admin/products">Manage Products</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item"  routerLink="/admin/orders">Manage orders</a>
             </div>
           </li>
+         
           <li class="nav-item " routerLinkActive="active">
-            <a class="nav-link text-danger mx-5 logoutLogo" routerLink="/auth"  href="#" (click)="onLogout()">{{ isAuthenticate ? 'LogOut' :'Login'}}</a>
+            <a class="nav-link text-danger mx-5 logoutLogo" routerLink="/auth"  (click)="onLogout()">{{ isAuthenticate ? 'LogOut' :'Login'}}</a>
+          </li>
+
+          <li class="nav-item cart"  *ngIf="isAuthenticate" >
+            <a class="nav-link" routerLink="/shopping-cart" >🛒</a>
           </li>
          
          

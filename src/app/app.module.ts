@@ -48,7 +48,7 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './Admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 const firebaseConfig = {
@@ -64,6 +64,7 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HeaderComponent,
     ReviewsComponent,
@@ -103,7 +104,8 @@ const firebaseConfig = {
     MatSelectModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NgbModule
     
   ],
   providers: [],

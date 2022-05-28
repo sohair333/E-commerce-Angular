@@ -11,10 +11,16 @@ import { EditeProdustComponent } from './products/EditeProdust/edite-produst.com
 import { ProductsComponent } from './products/products.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { ShopppingCartComponent } from './shoppping-cart/shoppping-cart.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { AdminProductsComponent } from './Admin/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.component';
+import { OrderSuccessComponent } from './order-success/order-success.component';
 
 
 const approutes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
+  {path:'/',component:HomeComponent,canActivate:[AuthGuard]}, 
   {path:'home',component:HomeComponent,canActivate:[AuthGuard]}, 
   {path:'products',component:ProductsComponent,children:[
     {path:'',component:ProductsComponent},
@@ -30,7 +36,8 @@ const approutes: Routes = [
   {path:'shopping-cart',component:ShopppingCartComponent},
   {path:'order-sucess',component:OrderSuccessComponent},
   {path:'admin/products',component:AdminProductsComponent},
-  {path:'admin/orders',component:AdminOrdersComponent}
+  {path:'admin/orders',component:AdminOrdersComponent},
+  {path:'my/orders',component:MyOrdersComponent}
 ];
 
 @NgModule({

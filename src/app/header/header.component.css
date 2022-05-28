@@ -5,7 +5,12 @@
     font-family: 'Macondo', cursive;
     font-weight: 700;
 }
-
+.navbar-brand{
+     margin-left:-35px
+}
+.cart{
+    font-size:20px !important;
+}
 .navbar .container  .navbar-brand img{
     height: 27px;
     margin-left: -10px;
@@ -20,10 +25,19 @@
 }
 .navbar .container .nav-item  a:hover{
     color: #ef585b;
-    transform: scale(1.1);
+
     transition: all .5s ease;
 }
 .active{
     background-color: #535222;
     border-radius: 7px;
+}
+.dropdown-menu{
+    color: darkgreen;
+    background-color: #647846;
+}
+.dropdown-menu a:hover{
+    background-color: #ac7a48;
+    font-weight: 700;
+    font-size: 18px;
 }

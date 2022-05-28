@@ -1,4 +1,4 @@
-<div class="row m-5 d-flex justify-content-center bg-danger rounded" >
+<div class="row m-5 d-flex justify-content-center logo rounded" >
     <div class="col-xs-12 col-md-7 col-md-offset-3">
         <!-- <div class="alert alert-danger m-5" *ngIf="error">
             <p> {{ error }}</p>
@@ -11,7 +11,7 @@
         </div>
         <form  #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" class="m-5 ">
             <div class="form-group">
-                <label for="Email">E-Mail</label>
+                <label for="Email" class="text-danger">E-Mail</label>
                 <input type="email" id="Email" class="form-control" 
                 ngModel
                 name="email"
@@ -20,7 +20,7 @@
                 >
             </div>
             <div class="form-group my-4">
-                <label for="password">Password</label>
+                <label for="password" class="text-danger">Password</label>
                 <input type="password" id="password" class="form-control"
                 ngModel
                 name="password"
@@ -30,10 +30,12 @@
             <div class="my-5">
                 <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">
                 {{ isLoginMode ? "Login" : "SignUp " }}</button>
-                 &nbsp; | &nbsp;
+                 &nbsp;  &nbsp;
                 <button class="btn btn-info" (click)="onSwitchMode()" type="button">Switch to {{ isLoginMode ? 'signUp' :'Login'}}</button>
             </div>
-            <button (click)="loginGoogle()" class="btn btn-light"> Login With Google </button>
+            <button (click)="loginGoogle()" class="btn btn-danger"> Login With Google </button>
+            <img height="150px" width="200px"  class="logo float-end rounded mt-4"src="https://cdn.dribbble.com/users/4107081/screenshots/9976207/media/1809db221885c1b795177c4a51f21cec.gif">
         </form>
+        
     </div>
 </div>

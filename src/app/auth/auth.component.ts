@@ -3,6 +3,14 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from "rxjs";
 import { AuthResponseData, authService } from "./auth.service";
+import *  as firebase from 'firebase/compat/app';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+
+
 
 @Component({
     selector:'app-auth',
@@ -14,7 +22,10 @@ export class  AuthComponent{
     isLoginMode= true;
     isLoading = false;
     error !:string  | null ;
-    constructor(private authService:authService,private router : Router){}
+    constructor(private authService:authService,private router : Router,
+    private angularFireAuth:AngularFireAuth){
+        
+    }
     onSwitchMode(){
         this.isLoginMode=!this.isLoginMode;
         
@@ -58,6 +69,10 @@ export class  AuthComponent{
     }
     onHandleError(){
       this.error=null;
+  }
+  loginGoogle(){
+
+    this.angularFireAuth.signInWithRedirect(new firebase.default.auth.GoogleAuthProvider());
   }
 
 }

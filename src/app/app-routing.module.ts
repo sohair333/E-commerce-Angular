@@ -20,7 +20,6 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 
 const approutes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
-  {path:'/',component:HomeComponent,canActivate:[AuthGuard]}, 
   {path:'home',component:HomeComponent,canActivate:[AuthGuard]}, 
   {path:'products',component:ProductsComponent,children:[
     {path:'',component:ProductsComponent},

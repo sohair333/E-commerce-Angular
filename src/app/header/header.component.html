@@ -30,11 +30,12 @@
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
             <a class="nav-link" routerLink="/contactUs">Contact Us</a>
           </li>
-          <li ngbDropdown class="nav-item dropdown">
-            <a ngbDropdownToggle class="nav-link dropdown-toggle"  style="cursor:pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              UserName
+          <li ngbDropdown  *ngIf="user" class="nav-item dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle"  style="cursor:pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            *ngIf="isAuthenticate">
+              {{ user.displayName }}
             </a>
-            <div ngbDropdownMenu class="dropdown-menu" >
+            <div  ngbDropdownMenu class="dropdown-menu" >
               <a class="dropdown-item"  routerLink="/my/orders">My Orders</a>
               <a class="dropdown-item"  routerLink="/admin/products">Manage Products</a>
               <div class="dropdown-divider"></div>
@@ -42,8 +43,8 @@
             </div>
           </li>
          
-          <li class="nav-item " routerLinkActive="active">
-            <a class="nav-link text-danger mx-5 logoutLogo" routerLink="/auth"  (click)="onLogout()">{{ isAuthenticate ? 'LogOut' :'Login'}}</a>
+          <li *ngIf="user" class="nav-item " routerLinkActive="active">
+            <a class="nav-link text-danger mx-5 logoutLogo"  *ngIf="isAuthenticate" routerLink="/auth"  (click)="onLogout()">LogOut </a>
           </li>
 
           <li class="nav-item cart"  *ngIf="isAuthenticate" >

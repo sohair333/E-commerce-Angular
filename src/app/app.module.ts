@@ -54,6 +54,7 @@ import { ProductFormComponent } from './Admin/product-form/product-form.componen
 import { CategoriesService } from './shared/categories.service';
 import { ProductService } from './shared/product.service';
 // import { AdminAuthGuardService } from './shared/admin-auth-guard.service';
+import { CustomFormsModule } from 'ng2-validation'
 
 
 const firebaseConfig = {
@@ -99,6 +100,7 @@ const firebaseConfig = {
     // HttpModule,
     HttpClientModule,
     FormsModule,
+    CustomFormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

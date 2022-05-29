@@ -1,6 +1,9 @@
+
+import { state } from "@angular/animations";
 import { Injectable } from "@angular/core";
 import {  ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from "@angular/router";
 import { map, Observable, tap ,take} from "rxjs";
+
 import { authService } from "./auth.service";
 
 @Injectable({
@@ -19,7 +22,8 @@ export class AuthGuard implements CanActivate{
        ),tap( 
         isAuth =>{
          if(!isAuth){
-            this.router.navigate(['/auth']);
+            this.router.navigate(['/auth'], { queryParams: {returnUrl : state.arguments}});
+            
          }
        
        }));

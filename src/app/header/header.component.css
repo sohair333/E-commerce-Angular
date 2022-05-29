@@ -3,7 +3,7 @@
 .logoutLogo{
     color: rgb(12, 202, 12) !important;
     font-family: 'Macondo', cursive;
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 .navbar-brand{
      margin-left:-35px

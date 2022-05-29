@@ -16,6 +16,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './Admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.component';
 import { OrderSuccessComponent } from './order-success/order-success.component';
+import { CheckOutComponent } from './check-out/check-out.component';
 
 
 const approutes: Routes = [
@@ -28,15 +29,16 @@ const approutes: Routes = [
     {path:':id/edit',component:EditeProdustComponent}
   ],canActivate:[AuthGuard]},
   {path:'auth',component:AuthComponent},
-  {path:'testimonials',component:TestimonialsComponent},
-  {path:'contactUs',component:ContactUsComponent},
-  {path:'gallery',component:FilterableProductsComponent},
-  {path:'reviews',component:ReviewsComponent},
-  {path:'shopping-cart',component:ShopppingCartComponent},
-  {path:'order-sucess',component:OrderSuccessComponent},
-  {path:'admin/products',component:AdminProductsComponent},
-  {path:'admin/orders',component:AdminOrdersComponent},
-  {path:'my/orders',component:MyOrdersComponent}
+  {path:'testimonials',component:TestimonialsComponent,canActivate:[AuthGuard]},
+  {path:'contactUs',component:ContactUsComponent,canActivate:[AuthGuard]},
+  {path:'gallery',component:FilterableProductsComponent,canActivate:[AuthGuard]},
+  {path:'reviews',component:ReviewsComponent,canActivate:[AuthGuard]},
+  {path:'shopping-cart',canActivate:[AuthGuard],component:ShopppingCartComponent},
+  {path:'order-sucess',canActivate:[AuthGuard],component:OrderSuccessComponent},
+  {path:'admin/products',component:AdminProductsComponent,canActivate:[AuthGuard]},
+  {path:'admin/orders',component:AdminOrdersComponent,canActivate:[AuthGuard]},
+  {path:'my/orders',component:MyOrdersComponent,canActivate:[AuthGuard]},
+  {path:'check-out',component:CheckOutComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({

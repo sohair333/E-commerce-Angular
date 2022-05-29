@@ -3,13 +3,11 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from "rxjs";
 import { AuthResponseData, authService } from "./auth.service";
-import *  as firebase from 'firebase/compat/app';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-
-
+import { AuthService } from "../shared/auth.service";
 
 
 @Component({
@@ -23,7 +21,7 @@ export class  AuthComponent{
     isLoading = false;
     error !:string  | null ;
     constructor(private authService:authService,private router : Router,
-    private angularFireAuth:AngularFireAuth){
+    private angularFireAuth:AuthService){
         
     }
     onSwitchMode(){
@@ -71,8 +69,11 @@ export class  AuthComponent{
       this.error=null;
   }
   loginGoogle(){
+  
+  this.angularFireAuth.loginWithGoogleAccount();
+  
 
-    this.angularFireAuth.signInWithRedirect(new firebase.default.auth.GoogleAuthProvider());
+   
   }
-
+ 
 }

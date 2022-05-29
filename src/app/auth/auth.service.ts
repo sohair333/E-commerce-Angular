@@ -1,10 +1,10 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, catchError } from "rxjs";
-import { throwError ,Subject } from 'rxjs';
+import { throwError } from 'rxjs';
 import { User } from './user.model';
 import { tap } from 'rxjs/operators'
-import { Router } from "@angular/router";
+import {  Router } from "@angular/router";
 export interface AuthResponseData {
     kind: string;
     idToken:string;

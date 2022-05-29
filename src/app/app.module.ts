@@ -51,6 +51,8 @@ import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.componen
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from './shared/auth.service';
 import { UserService } from './shared/user.service';
+import { ProductFormComponent } from './Admin/product-form/product-form.component';
+import { CategoriesService } from './shared/categories.service';
 // import { AdminAuthGuardService } from './shared/admin-auth-guard.service';
 
 
@@ -89,7 +91,8 @@ const firebaseConfig = {
     OrderSuccessComponent,
     MyOrdersComponent,
     AdminProductsComponent,
-    AdminOrdersComponent
+    AdminOrdersComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
@@ -111,7 +114,7 @@ const firebaseConfig = {
     NgbModule
     
   ],
-  providers: [AuthService,UserService,],
+  providers: [AuthService,UserService,CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

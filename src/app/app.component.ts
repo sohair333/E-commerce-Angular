@@ -16,7 +16,8 @@ export class AppComponent {
       auth.user$.subscribe(user =>{
         if(user)
         {
-          userService.save(user);
+          // solve problem of autherization users
+          this.userService.save(user);
           let returnUrl = localStorage.getItem('returnUrl');
           router.navigate([returnUrl!]);
         }

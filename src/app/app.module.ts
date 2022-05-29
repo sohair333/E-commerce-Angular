@@ -51,6 +51,7 @@ import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.componen
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from './shared/auth.service';
 import { UserService } from './shared/user.service';
+// import { AdminAuthGuardService } from './shared/admin-auth-guard.service';
 
 
 const firebaseConfig = {
@@ -110,7 +111,7 @@ const firebaseConfig = {
     NgbModule
     
   ],
-  providers: [AuthService,UserService],
+  providers: [AuthService,UserService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

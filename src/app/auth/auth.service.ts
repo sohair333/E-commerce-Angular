@@ -20,6 +20,7 @@ export interface AuthResponseData {
 export class authService {
     private tokenExpirationTimer !:any;
     user = new BehaviorSubject<User | null >(null);
+  user$: any;
     // token !:string |null ;
 
     constructor (private http:HttpClient,private router:Router){

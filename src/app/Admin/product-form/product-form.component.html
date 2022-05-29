@@ -1,7 +1,7 @@
 <form class="m-5">
     <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" id="title" class="form-control">
+        <input  type="text" id="title" class="form-control">
     </div>
 
     <div class="form-group">
@@ -16,9 +16,10 @@
     </div>
     <div class="form-group">
         <label for="category">Category</label>
-        <select type="text" id="category" class="form-control">
+        <select id="category" class="form-control">
             <option value=""></option>
-            <option *ngFor="let com of categorie$ | async"  [value]="com.$key">{{ com.name }}</option>
+            
+            <option *ngFor= "let c of categorie$ | async"  [value]= "c.key"> {{ c.val.name }}</option>
         </select>
 
     </div>

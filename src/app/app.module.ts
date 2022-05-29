@@ -50,6 +50,7 @@ import { AdminProductsComponent } from './Admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from './shared/auth.service';
+import { UserService } from './shared/user.service';
 
 
 const firebaseConfig = {
@@ -109,7 +110,7 @@ const firebaseConfig = {
     NgbModule
     
   ],
-  providers: [AuthService],
+  providers: [AuthService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

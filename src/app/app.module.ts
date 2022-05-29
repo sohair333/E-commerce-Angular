@@ -24,7 +24,6 @@ import { AlertComponent } from './shared/alert/alert.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -32,14 +31,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 import {MatSelectModule} from '@angular/material/select';
 
 import { AngularFireModule } from '@angular/fire/compat';
 
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+// import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -53,6 +52,7 @@ import { AuthService } from './shared/auth.service';
 import { UserService } from './shared/user.service';
 import { ProductFormComponent } from './Admin/product-form/product-form.component';
 import { CategoriesService } from './shared/categories.service';
+import { ProductService } from './shared/product.service';
 // import { AdminAuthGuardService } from './shared/admin-auth-guard.service';
 
 
@@ -69,7 +69,6 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    
     AppComponent,
     HeaderComponent,
     ReviewsComponent,
@@ -114,7 +113,7 @@ const firebaseConfig = {
     NgbModule
     
   ],
-  providers: [AuthService,UserService,CategoriesService],
+  providers: [AuthService,UserService,CategoriesService,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

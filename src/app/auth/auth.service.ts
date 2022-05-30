@@ -18,8 +18,8 @@ export interface AuthResponseData {
     providedIn:'root'
 })
 export class authService {
-    private tokenExpirationTimer !:any;
-    user = new BehaviorSubject<User | null >(null);
+  private tokenExpirationTimer !:any;
+  user = new BehaviorSubject<User | null >(null);
   user$: any;
     // token !:string |null ;
 

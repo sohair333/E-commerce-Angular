@@ -16,10 +16,10 @@
             
         
     </div>
-    <div class="alert alert-danger m-2" *ngIf= "price.touched && price.invalid"> <div *ngIf="price.errors.required">
+    <div class="alert alert-danger m-2" *ngIf= "price.touched && price.invalid"> <div *ngIf="price.errors?.['required']">
         Price Is Required! 
     </div>
-    <div *ngIf="price.errors.min">
+    <div *ngIf="price.errors?.['min']">
         Price Is Should Be Higher Than this value 0 ! 
     </div>
         </div>
@@ -39,14 +39,14 @@
         <input ngModel url #imageUrl= "ngModel" required name="imageUrl" type="text" id="imageUrl" class="form-control">
         <div class="alert alert-danger m-2" *ngIf= "imageUrl.touched && imageUrl.invalid">
             
-            <div *ngIf= "imageUrl.errors.required">
+            <div *ngIf= "imageUrl.errors?.['required']">
                 ImageUrl Is Required! 
             </div>
-            <div *ngIf= "imageUrl.errors.url">
+            <div *ngIf= "imageUrl.errors?.['url']">
                 ImageUrl Is Invalid Url! 
             </div>
         
     </div>
     <button class="btn btn-primary m-3"> Save </button>
 
-</form>
+<!-- </form> -->

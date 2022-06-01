@@ -38,10 +38,11 @@ const approutes: Routes = [
   {path:'shopping-cart',canActivate:[AuthGuard],component:ShopppingCartComponent},
   {path:'order-sucess',canActivate:[AuthGuard],component:OrderSuccessComponent},
   {path:'admin/products',component:AdminProductsComponent,canActivate:[AuthGuard]},
-  {path:'admin/orders',component:AdminOrdersComponent,canActivate:[AuthGuard]},
   {path:'my/orders',component:MyOrdersComponent,canActivate:[AuthGuard]},
   {path:'check-out',component:CheckOutComponent,canActivate:[AuthGuard]},
-  {path:'admin/product/new',component:ProductFormComponent,canActivate:[AuthGuard]}
+  {path:'admin/product/new',component:ProductFormComponent,canActivate:[AuthGuard]},
+  {path:'admin/product/:id',component:ProductFormComponent,canActivate:[AuthGuard]},
+  {path:'admin/orders',component:AdminOrdersComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({

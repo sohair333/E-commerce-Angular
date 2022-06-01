@@ -11,5 +11,8 @@ export class ProductService{
     getAll(){
         return this.afDB.list('/products');
     }
+    get(productId:any){
+        return this.afDB.object('/products'+productId);
+    }
 
 }

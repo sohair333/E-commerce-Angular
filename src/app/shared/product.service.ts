@@ -28,5 +28,14 @@ export class ProductService{
     
         return  this.productMock
       }
+
+      update(productId:any,product:Product){
+       return  this.afDB.object('/products'+ productId).update(product);
+      }
+
+      delete(productId:any){
+          this.afDB.object('/products/'+productId).remove();
+      }
+
 }
 

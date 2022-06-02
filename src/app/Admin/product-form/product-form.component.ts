@@ -27,19 +27,36 @@ export class ProductFormComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.categorie$ = categorieService.getCategories();
+
+
+    this.id = this.route.snapshot.paramMap.get('id');
+    if(this.id){
+    
+    this.productService.get(this.id).pipe(take(1)).subscribe((p:any) => this.product = p);
+    }
     
   }
 
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('id');
-    if(id){
+    this.id = this.route.snapshot.paramMap.get('id');
+    if(this.id){
     
-    this.productService.get(id).pipe(take(1)).subscribe((p:any) => this.product = p);
+    this.productService.get(this.id).pipe(take(1)).subscribe((p:any) => this.product = p);
     }
     }
 
   save(product: any) {
-    this.productService.create(product);
+    if(this.id) {this.productService.update(this.id,product);}
+    else  {this.productService.create(product);}
     this.router.navigate(['/admin/products']);
   }
+  delete(){
+    if(!confirm('Are You sure TO delete Item ?!')) {return;}
+   
+    this.productService.delete(this.id);
+    this.router.navigate(['/admin/products']);
+   
+  }
+
+  
 }

@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriesService } from 'src/app/shared/categories.service';
 import { ProductService } from 'src/app/shared/product.service';
 import { take } from 'rxjs/operators';
-import { FormControl, FormGroup } from '@angular/forms';
+
 export interface Product {
   title: string;
   price: number;

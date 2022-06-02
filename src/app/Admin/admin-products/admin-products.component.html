@@ -1,22 +1,27 @@
-
 <p class="mt-5">
-    <a routerLink="/admin/product/new" class="btn btn-primary m-5">New Product</a>
+  <a routerLink="/admin/product/new" class="btn btn-primary m-5">New Product</a>
 </p>
-<hr>
+<hr />
+<p>
+  <input type="text" 
+  #query 
+  (keyup)="filter(query.value)"
+  placeholder="Search...." class="form-control" />
+</p>
 <table class="table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor= "let p of products$ | async">
-            <td>{{ p.payload.val().title }}</td>
-            <td>{{ p.payload.val().price }}</td>
-            <td>
-                <a [routerLink]="['/admin/product/', p.key]">Edite</a>
-            </td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let p of filteredProducts">
+      <td>{{ p.payload.val().title }}</td>
+      <td>{{ p.payload.val().price }}</td>
+      <td>
+        <a [routerLink]="['/admin/product/', p.key]">Edite</a>
+      </td>
+    </tr>
+  </tbody>
 </table>

@@ -12,34 +12,38 @@
 </div> -->
 
 <h2 class="text-center mt-5">Our Products</h2>
-<div class="row  ">
-    <div class="col-3 ">
-        <ul class="list-group mt-4">
-            <li style="cursor: pointer;" *ngFor= "let c of categories$ |async" class="list-group-item bg-success ">
-                {{ c.val.name }}
-            </li>
-        </ul>
+<div class="row">
+  <div class="col-3">
+    <div class="list-group mt-4">
+      <a
+        style="cursor: pointer"
+        *ngFor="let c of categories$ | async"
+        routerLink="/home"
+        [queryParams]="{ category:c.key }"
+        class="list-group-item  list-group-item-action bg-success"
+        [class.active] = "category === c.key"
+      >
+        {{ c.val.name }}
+      </a>
     </div>
-    <div class="col">
-        <div class="row">
-            <ng-container *ngFor= "let p of Products$ |async ; let i = index">
-                <div class="col">
-                    <div class="card m-3 bg-success products" style="width: 18rem;" >
-                        <img class="card-img-top" [src]=" p.imageUrl " alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">{{ p.title }}</h5>
-                          <p class="card-text">{{ p.price |currency:'USD':true }}</p>
-                          <a href="#" class="btn btn-danger">Add To Cart</a>
-                        </div>
-                      </div>
-                </div>
-                <div *ngIf="(i+1)% 2 === 0" class="w-100"></div>
-            </ng-container>
+  </div>
+  <div class="col">
+    <div class="row">
+        <div *ngIf= "filteredProducts.length > 0">
+      <ng-container *ngFor= "let p of filteredProducts ; let i = index">
+        <div class="col">
+          <div class="card m-3 bg-success products" style="width: 18rem">
+            <img class="card-img-top" [src]="p.imageUrl" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{{ p.title }}</h5>
+              <p class="card-text">{{ p.price | currency: "USD":true }}</p>
+              <a href="#" class="btn btn-danger">Add To Cart</a>
+            </div>
+          </div>
         </div>
+        <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
+      </ng-container>
     </div>
-
+    </div>
+  </div>
 </div>
-
-
-
-

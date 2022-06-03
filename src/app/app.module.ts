@@ -57,6 +57,7 @@ import { ProductService } from './shared/product.service';
 import { CustomFormsModule } from 'ng2-validation'
 import { DataTablesModule  } from 'angular-datatables';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { CarsoulProductsComponent } from './carsoul-products/carsoul-products.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
@@ -93,7 +94,8 @@ const firebaseConfig = {
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    CarsoulProductsComponent
   ],
   imports: [
     BrowserModule,

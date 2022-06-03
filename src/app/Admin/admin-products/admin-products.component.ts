@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 import { ProductService } from 'src/app/shared/product.service';
-import { Product } from 'src/app/models';
+import { Product,pro } from 'src/app/models';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-admin-products',
   templateUrl: './admin-products.component.html',
@@ -10,11 +11,12 @@ import { Product } from 'src/app/models';
 export class AdminProductsComponent implements OnInit, OnDestroy {
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
+  persons: pro[] = [];
   products$: Array<Product> = [];
   subscription!: Subscription;
   filteredProducts: any[] =[];
 
-  constructor(private pService: ProductService) {
+  constructor(private pService: ProductService,private httpClient:HttpClient) {
     this.subscription =  this.pService.getAll().subscribe(products => {
       this.filteredProducts =  this.products$ = products;
     });
@@ -26,7 +28,14 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
       pageLength: 2
     };
 
-    
+    this.httpClient.get<pro[]>('data/data.json')
+      .subscribe(data => {
+        this.persons = (data as any).data;
+        this.dtTrigger.next(data);
+      });
+
+
+
    
   }
   /// fix search bug

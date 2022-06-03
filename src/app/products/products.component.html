@@ -1,0 +1,12 @@
+<div class="container">
+   <div class="row">
+    <div class="card bg-success products" style="width: 18rem;" *ngFor= "let p of Products$ |async ; let i = index">
+        <img class="card-img-top" [src]=" p.imageUrl " alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.title }}</h5>
+          <p class="card-text">{{ p.price |currency:'USD':true }}</p>
+          <a href="#" class="btn btn-primary">Add To Cart</a>
+        </div>
+      </div>
+   </div>
+</div>

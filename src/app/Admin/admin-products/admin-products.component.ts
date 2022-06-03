@@ -28,7 +28,7 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
       pageLength: 2
     };
 
-    this.httpClient.get<pro[]>('data/data.json')
+    this.httpClient.get<pro[]>('https://e-commerce-website-a5b86-default-rtdb.firebaseio.com/')
       .subscribe(data => {
         this.persons = (data as any).data;
         this.dtTrigger.next(data);
@@ -38,7 +38,7 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
 
    
   }
-  /// fix search bug
+  
   filter(query: string) {
     this.filteredProducts = (query)
       ? this.products$.filter((p) =>

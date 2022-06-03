@@ -9,30 +9,27 @@ import { CategoriesService } from '../shared/categories.service';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  Products$ : Product[] |any = [];
-  filteredProducts :Product[] |any ;
+  Products$: Product[] = [];
+  filteredProducts: Product[] = [];
   categories$: any;
-  category !:string |null;
-  constructor(PService: ProductService, categoryService: CategoriesService,
-    activateRoute:ActivatedRoute) {
-     PService.getAll().subscribe(
-       products =>{
-         this.Products$ = products;
-       }
-     );
+  category!: string | null;
+  constructor(
+    PService: ProductService,
+    categoryService: CategoriesService,
+    activateRoute: ActivatedRoute
+  ) {
+    PService.getAll().subscribe((products) => {
+      this.Products$ = products;
+    });
     this.categories$ = categoryService.getCategories();
 
+    activateRoute.queryParamMap.subscribe((params) => {
+      this.category = params.get('category');
 
-    activateRoute.queryParamMap.subscribe(
-      params =>{
-        this.category = params.get('category');
-
-
-        this.filteredProducts = (this.category) ?
-        this.Products$.filter((p:any) =>
-          p.category === this.category) : this.Products$;
-   
-      });
+      this.filteredProducts = (this.category)
+        ? this.Products$.filter((p) => p.categorie === this.category)
+        : this.Products$;
+    });
   }
 
   ngOnInit(): void {}

@@ -11,12 +11,12 @@
    </div>
 </div> -->
 
-
-<div class="row">
-    <div class="col-3">
-        <ul class="list-group">
-            <li *ngFor= "let c of categories$ |async" class="list-group-item">
-                {{ c.name }}
+<h2 class="text-center mt-5">Our Products</h2>
+<div class="row  ">
+    <div class="col-3 ">
+        <ul class="list-group mt-4">
+            <li *ngFor= "let c of categories$ |async" class="list-group-item bg-success ">
+                {{ c.val.name }}
             </li>
         </ul>
     </div>
@@ -33,7 +33,7 @@
                         </div>
                       </div>
                 </div>
-                <div *ngIf="(i+1)% 3 === 0" class="w-100"></div>
+                <div *ngIf="(i+1)% 2 === 0" class="w-100"></div>
             </ng-container>
         </div>
     </div>
@@ -42,4 +42,4 @@
 
 
 
-<h2 class="text-center mt-5">Our Products</h2>
+

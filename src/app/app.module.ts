@@ -55,7 +55,8 @@ import { CategoriesService } from './shared/categories.service';
 import { ProductService } from './shared/product.service';
 // import { AdminAuthGuardService } from './shared/admin-auth-guard.service';
 import { CustomFormsModule } from 'ng2-validation'
-
+import { DataTablesModule  } from 'angular-datatables';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
@@ -101,6 +102,8 @@ const firebaseConfig = {
     HttpClientModule,
     FormsModule,
     CustomFormsModule,
+    DataTablesModule, 
+    NgxDatatableModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

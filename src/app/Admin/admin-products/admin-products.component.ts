@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 import { ProductService } from 'src/app/shared/product.service';
 import { Product } from 'src/app/models';
 @Component({
@@ -8,6 +8,8 @@ import { Product } from 'src/app/models';
   styleUrls: ['./admin-products.component.css'],
 })
 export class AdminProductsComponent implements OnInit, OnDestroy {
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject<any>();
   products$: Array<Product> = [];
   subscription!: Subscription;
   filteredProducts: any[] =[];
@@ -18,7 +20,15 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 2
+    };
+
+    
+   
+  }
   /// fix search bug
   filter(query: string) {
     this.filteredProducts = (query)
@@ -31,5 +41,6 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+    this.dtTrigger.unsubscribe();
   }
 }

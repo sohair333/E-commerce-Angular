@@ -22,15 +22,15 @@ export class ProductsComponent implements OnInit {
     PService.getAll().pipe(switchMap((products) => 
     {
       this.Products$ = products;
-
-      activateRoute.queryParamMap.subscribe((params) => {
+      return activateRoute.queryParamMap;
+    })).subscribe((params) => {
         this.category = params.get('category');
 
         this.filteredProducts = this.category
           ? this.Products$.filter((p) => p.categorie === this.category)
           : this.Products$;
-      });
-    }));
+     
+    });
     this.categories$ = categoryService.getCategories();
   }
 

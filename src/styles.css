@@ -461,6 +461,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
+    margin-left: 30px;
 }
 .content{
     

@@ -86,6 +86,12 @@ body{
         padding: 20px;
         
     } */
+    .parallax{
+        margin-left:0px;
+    }
+    .content{
+        flex-wrap: wrap;
+    }
 
 
 }
@@ -127,6 +133,12 @@ body{
         padding: 20px;
         
     } */
+    .parallax{
+        margin-left: -50px;
+    }
+    .content{
+        flex-wrap: wrap;
+    }
 
 }
 @media (min-width:992px){
@@ -163,6 +175,13 @@ body{
         padding: 20px;
         
     } */
+    .parallax{
+        margin-left: -30px;
+    }
+    .content{
+        flex-wrap: nowrap;
+    }
+    
 
 }
 .text.sec-text::before{
@@ -415,4 +434,60 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 28px;
     color: white;
     font-weight: 700;
+}
+.parallax{
+    background:url("https://img.freepik.com/free-photo/colour-smoke-background_71163-197.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369") no-repeat fixed  100%;
+    background-size: cover;
+    
+}
+.parallax-inner{
+    
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.about .content img{
+    height: auto;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.text1{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.content{
+    
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.text1 h1 {
+    color: #ffcc74;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.text1 h6{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.text1 p {
+    color:#c0c4d6 ;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
 }

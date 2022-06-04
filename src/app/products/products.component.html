@@ -28,11 +28,11 @@
     </div>
   </div>
   <div class="col">
-    <div class="row">
-        <div *ngIf= "filteredProducts.length > 0">
-      <ng-container *ngFor= "let p of filteredProducts ; let i = index">
-        <div class="col">
-          <div class="card m-3 bg-success products" style="width: 18rem">
+    <div class="row ">
+        <div *ngIf= "filteredProducts.length > 0" class="Category">
+      <ng-container  *ngFor= "let p of filteredProducts ; let i = index">
+        <div class="col ">
+          <div class="card m-3 bg-success products " style="width: 18rem">
             <img class="card-img-top" [src]="p.imageUrl" alt="Card image cap" />
             <div class="card-body">
               <h5 class="card-title">{{ p.title }}</h5>
@@ -41,7 +41,7 @@
             </div>
           </div>
         </div>
-        <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
+        <div *ngIf="(i + 1 ) % 2 === 0" class="w-100"></div>
       </ng-container>
     </div>
     </div>

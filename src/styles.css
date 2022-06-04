@@ -26,7 +26,7 @@ body{
 }
 .first-par{
     color: white !important;
-    font-family: 'Macondo', cursive;
+    /* font-family: 'Macondo', cursive; */
     font-size: 22px;
     /* margin-left: -80px !important; */
     width: 500px;
@@ -436,8 +436,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-weight: 700;
 }
 .parallax{
-    background:url("https://img.freepik.com/free-photo/colour-smoke-background_71163-197.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369") no-repeat fixed  100%;
+    background:url("https://img.freepik.com/free-photo/colour-smoke-background_71163-197.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369") repeat fixed  100%;
     background-size: cover;
+    margin-left: -17px;
+    
+
     
 }
 .parallax-inner{
@@ -456,12 +459,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 500px;
     max-width: 100%;
     border-radius: 10px;
+    margin-left: 16px;
 }
 .text1{
     width: 550px;
     max-width: 100%;
     padding: 0 10px;
     margin-left: 30px;
+    margin-top: 10px;
 }
 .content{
     
@@ -469,7 +474,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 0 auto;
     display: flex !important;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 .text1 h1 {
@@ -491,4 +496,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     line-height: 28px;
     letter-spacing: 1px;
     margin-bottom: 45px;
+}
+.Category{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
 }

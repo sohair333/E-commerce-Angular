@@ -14,3 +14,9 @@ export interface pro {
     categorie: string;
     imageUrl: string;
 }
+export class Prodt {
+    name !: string;
+    quantity !: number;
+
+    constructor() {}
+}

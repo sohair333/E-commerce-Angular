@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriesService } from 'src/app/shared/categories.service';
 import { ProductService } from 'src/app/shared/product.service';
 import { take } from 'rxjs/operators';
+import { pro } from 'src/app/models';
 
 export interface Product {
   title: string;
@@ -17,7 +18,7 @@ export interface Product {
 })
 export class ProductFormComponent implements OnInit {
   categorie$: any;
-  product: Product = {} as Product;
+  product: pro |any = {} as Product;
   id:any;
 
   constructor(

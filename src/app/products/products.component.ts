@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/shared/product.service';
-import { Product } from '../models';
+import { pro, Product } from '../models';
 
 import { switchMap } from 'rxjs/operators';
 @Component({
@@ -10,8 +10,8 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  Products$: Product[] = [];
-  filteredProducts: Product[] = [];
+  Products$: pro[] = [];
+  filteredProducts: pro[] = [];
 
   category!: string | null;
   constructor(

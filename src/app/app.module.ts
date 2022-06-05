@@ -60,6 +60,7 @@ import { CarsoulProductsComponent } from './carsoul-products/carsoul-products.co
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './products/product-card/product-card.component';
 import { ShoppingCartService } from './shared/shopppingCart.service';
+import { DarkModeComponent } from './dark-mode/dark-mode.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
@@ -99,7 +100,8 @@ const firebaseConfig = {
     ProductFormComponent,
     CarsoulProductsComponent,
     ProductFilterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    DarkModeComponent
   ],
   imports: [
     BrowserModule,

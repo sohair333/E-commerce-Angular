@@ -18,7 +18,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ShopppingCartComponent } from './shoppping-cart/shoppping-cart.component';
 import { BackToTopComponent } from './back-to-top/back-to-top.component';
 
-import { EditeProdustComponent } from './products/EditeProdust/edite-produst.component';
 import { DetailsProductsComponent } from './products/details-products/details-products.component';
 import { AlertComponent } from './shared/alert/alert.component';
 import { FooterComponent } from './footer/footer.component';
@@ -59,6 +58,7 @@ import { DataTablesModule  } from 'angular-datatables';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { CarsoulProductsComponent } from './carsoul-products/carsoul-products.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
+import { ProductCardComponent } from './products/product-card/product-card.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
@@ -85,7 +85,7 @@ const firebaseConfig = {
     PageNotFoundComponent,
     ShopppingCartComponent,
     BackToTopComponent,
-    EditeProdustComponent,
+    ProductCardComponent,
     DetailsProductsComponent,
     AlertComponent,
     FooterComponent,
@@ -97,7 +97,8 @@ const firebaseConfig = {
     AdminOrdersComponent,
     ProductFormComponent,
     CarsoulProductsComponent,
-    ProductFilterComponent
+    ProductFilterComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

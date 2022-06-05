@@ -1,15 +1,3 @@
-<!-- <div class="container">
-   <div class="row">
-    <div class="card bg-success products" style="width: 18rem;" *ngFor= "let p of Products$ |async ; let i = index">
-        <img class="card-img-top" [src]=" p.imageUrl " alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">{{ p.title }}</h5>
-          <p class="card-text">{{ p.price |currency:'USD':true }}</p>
-          <a href="#" class="btn btn-danger">Add To Cart</a>
-        </div>
-      </div>
-   </div>
-</div> -->
 
 <h2 class="text-center mt-5">Our Products</h2>
 <div class="row">
@@ -21,14 +9,7 @@
         <div *ngIf= "filteredProducts.length > 0" class="Category">
       <ng-container  *ngFor= "let p of filteredProducts ; let i = index">
         <div class="col ">
-          <div class="card m-3 bg-success products " style="width: 18rem">
-            <img class="card-img-top" [src]="p.imageUrl" alt="Card image cap" />
-            <div class="card-body">
-              <h5 class="card-title">{{ p.title }}</h5>
-              <p class="card-text">{{ p.price | currency: "USD":true }}</p>
-              <a href="#" class="btn btn-danger">Add To Cart</a>
-            </div>
-          </div>
+         <app-product-card [product]="p"></app-product-card>
         </div>
         <div *ngIf="(i + 1 ) % 2 === 0" class="w-100"></div>
       </ng-container>

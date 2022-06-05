@@ -101,15 +101,10 @@
        
         </div>
         <div class="row">
-        <div class="col-6 ">
-          <div class="card bg-transparent" style="width: 18rem">
-            <img class="card-img-top" [src]="product.imageUrl"  *ngIf= "product.imageUrl"/>
-            <div class="card-body">
-              <h5 class="card-title">{{ product.title }}</h5>
-              <p class="card-text">{{ product.price | currency: "USD":true }}</p>
-              <p class="card-text">{{ product.categorie }}</p>
-            </div>
-          </div>
+        <div class="col-md-6 ">
+          <div class="col ">
+            <app-product-card [product]="product" [show-actions]="false"></app-product-card>
+           </div>
         </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ export class ShoppingCartService{
    async addToCart(product:pro){
         let cartId = await this.getOrCreateCart();
        let Quantity =this.afDB.object('/shopping-cart/'+cartId + '/items/' + product.key);
-       Quantity.value.subscribe((item:any) =>{
+       Quantity.valueChanges().pipe(take(1)) .subscribe((item:any) =>{
         if(item.exists()){
             item.update({quantity : item.quantity + 1 });
         }

@@ -61,6 +61,7 @@ import { ProductFilterComponent } from './products/product-filter/product-filter
 import { ProductCardComponent } from './products/product-card/product-card.component';
 import { ShoppingCartService } from './shared/shopppingCart.service';
 import { DarkModeComponent } from './dark-mode/dark-mode.component';
+import { CountDownSaleComponent } from './count-down-sale/count-down-sale.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
@@ -101,7 +102,8 @@ const firebaseConfig = {
     CarsoulProductsComponent,
     ProductFilterComponent,
     ProductCardComponent,
-    DarkModeComponent
+    DarkModeComponent,
+    CountDownSaleComponent
   ],
   imports: [
     BrowserModule,

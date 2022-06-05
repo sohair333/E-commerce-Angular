@@ -1,9 +1,12 @@
-<div class="card m-3 bg-success products " *ngIf= "product.title"  style="width: 18rem">
+<div class="card m-3 bg-success products " *ngIf= "product.title"  style="width: 21rem">
     <img class="card-img-top" [src]="product.imageUrl" *ngIf= "product.imageUrl" alt="{{product.title}}" />
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text">{{ product.price | currency: "USD":true }}</p>
       <p class="card-text">{{ product.categorie }}</p>
-      <a href="#" class="btn btn-danger" *ngIf="showActoins">Add To Cart</a>
+     
+    </div>
+    <div class="card-footer">
+        <a href="#" class="btn btn-danger btn-block w-100 rounded" *ngIf="showActoins">Add To Cart</a>
     </div>
   </div>

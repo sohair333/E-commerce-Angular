@@ -502,3 +502,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     grid-template-columns: repeat(3,1fr);
     
 }
+.card-footer{
+    padding: 0;
+    display: block;
+}
+.card{
+    margin-bottom:30px ;
+}
+.sticky-top{
+    top: 80px;
+}

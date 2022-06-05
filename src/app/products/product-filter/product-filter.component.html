@@ -1,0 +1,17 @@
+<div class="list-group mt-4">
+  <a
+    class="list-group-item list-group-item-action bg-success"
+    routerLink="/products"
+    >All Categories</a
+  >
+  <a
+    style="cursor: pointer"
+    *ngFor="let c of categories$ | async"
+    routerLink="/products"
+    [queryParams]="{ category: c.key }"
+    class="list-group-item list-group-item-action bg-success"
+    [class.active]="category === c.key"
+  >
+    {{ c.val.name }}
+  </a>
+</div>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/shared/product.service';
 import { Product } from '../models';
-import { CategoriesService } from '../shared/categories.service';
+
 import { switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-products',
@@ -12,11 +12,10 @@ import { switchMap } from 'rxjs/operators';
 export class ProductsComponent implements OnInit {
   Products$: Product[] = [];
   filteredProducts: Product[] = [];
-  categories$: any;
+
   category!: string | null;
   constructor(
     PService: ProductService,
-    categoryService: CategoriesService,
     activateRoute: ActivatedRoute
   ) {
     PService.getAll().pipe(switchMap((products) => 
@@ -31,7 +30,8 @@ export class ProductsComponent implements OnInit {
           : this.Products$;
      
     });
-    this.categories$ = categoryService.getCategories();
+
+    
   }
 
   ngOnInit(): void {}

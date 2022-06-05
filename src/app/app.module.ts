@@ -59,6 +59,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { CarsoulProductsComponent } from './carsoul-products/carsoul-products.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './products/product-card/product-card.component';
+import { ShoppingCartService } from './shared/shopppingCart.service';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
@@ -123,7 +124,7 @@ const firebaseConfig = {
     NgbModule
     
   ],
-  providers: [AuthService,UserService,CategoriesService,ProductService],
+  providers: [AuthService,UserService,CategoriesService,ProductService,ShoppingCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

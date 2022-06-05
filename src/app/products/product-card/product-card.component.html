@@ -7,6 +7,6 @@
      
     </div>
     <div class="card-footer">
-        <a href="#" class="btn btn-danger btn-block w-100 rounded" *ngIf="showActoins">Add To Cart</a>
+        <button class="btn btn-danger btn-block w-100 rounded" *ngIf="showActoins" (click)="addToCart(product)" >Add To Cart</button>
     </div>
   </div>

@@ -8,7 +8,7 @@ export class ShoppingCartService {
 
   private create() {
     return this.afDB.list('/shopping-cart').push({
-      dataCreated: new Date().getTime(),
+      dataCreated: new Date().getTime()
     });
   }
 
@@ -23,35 +23,15 @@ export class ShoppingCartService {
   private async getOrCreateCartID()  :Promise <string>{
     let CartID = localStorage.getItem('cartId');
     if (CartID) return CartID;
-
+   
     let res: any = await this.create();
-    localStorage.setItem('cartId', res.key);
+    localStorage.setItem('cartId', res.key );
     return res.key;
+
   }
   async addToCart(product: pro) {
     let cartId = await this.getOrCreateCartID();
-    //    let Quantity =this.afDB.object('/shopping-cart/'+cartId + '/items/' + product.key);
-
-    //     let Quantity = this.getItem(cartId,product.key);
-    //    Quantity.pipe(take(1)) .subscribe((item:any) =>{
-
-    //         item.update({product:Prodt,quantity : (item.quantity || 0) +1 });
-
-    //    });
-
-    // let item$ = this.afDB.object('/shopping-cart/'+cartId + '/items/'+product.key );
-    // item$.valueChanges().pipe(take(1)).subscribe(
-    //     (item:any) =>{
-    //         if(item.payload.exists())
-    //         {
-    //             item$.update({quantity : item.quantity +1 });
-
-    //         }
-    //         else{
-    //             item$.set({product:Prodt , quantity :1 });
-    //         }
-    //     }
-    // )
+   
 
     const item$ = this.getItem(cartId,product.key);
 

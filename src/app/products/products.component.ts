@@ -11,44 +11,42 @@ import { Subscription } from 'rxjs';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
 })
-export class ProductsComponent implements OnInit ,OnDestroy{
+export class ProductsComponent implements OnInit, OnDestroy {
   Products$: pro[] = [];
   filteredProducts: pro[] = [];
-  cart !:any;
-  subscribtion !:Subscription;
+  cart!: any;
+  subscribtion!: Subscription;
   category!: string | null;
-   constructor(
+  constructor(
     PService: ProductService,
     activateRoute: ActivatedRoute,
-    private shoppingCartServise:ShoppingCartService
+    private shoppingCartServise: ShoppingCartService
   ) {
-
-   
-
-    PService.getAll().pipe(switchMap((products) => 
-    {
-      this.Products$ = products;
-      return activateRoute.queryParamMap;
-    })).subscribe((params) => {
+    PService.getAll()
+      .pipe(
+        switchMap((products) => {
+          this.Products$ = products;
+          return activateRoute.queryParamMap;
+        })
+      )
+      .subscribe((params) => {
         this.category = params.get('category');
 
         this.filteredProducts = this.category
           ? this.Products$.filter((p) => p.categorie === this.category)
           : this.Products$;
-     
-    });
-
-    
+      });
   }
 
- async ngOnInit() {
-    this.subscribtion=(await this.shoppingCartServise.getCart()).valueChanges().subscribe(
-      (cart:any) =>{
-       return this.cart = cart;
-      }
-    )
+  async ngOnInit() {
+   
+    this.subscribtion = (await this.shoppingCartServise.getCart())
+      .valueChanges()
+      .subscribe((cart: any) => {
+        return (this.cart = cart);
+      });
   }
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.subscribtion.unsubscribe();
   }
 }

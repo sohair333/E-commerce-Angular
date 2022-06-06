@@ -62,6 +62,7 @@ import { ProductCardComponent } from './products/product-card/product-card.compo
 import { ShoppingCartService } from './shared/shopppingCart.service';
 import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { CountDownSaleComponent } from './count-down-sale/count-down-sale.component';
+import { BestSalleingPackagesComponent } from './best-salleing-packages/best-salleing-packages.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
@@ -103,7 +104,8 @@ const firebaseConfig = {
     ProductFilterComponent,
     ProductCardComponent,
     DarkModeComponent,
-    CountDownSaleComponent
+    CountDownSaleComponent,
+    BestSalleingPackagesComponent
   ],
   imports: [
     BrowserModule,

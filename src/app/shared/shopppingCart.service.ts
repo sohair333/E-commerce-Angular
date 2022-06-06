@@ -31,8 +31,6 @@ export class ShoppingCartService {
   }
   async addToCart(product: pro) {
     let cartId = await this.getOrCreateCartID();
-   
-
     const item$ = this.getItem(cartId,product.key);
 
     item$

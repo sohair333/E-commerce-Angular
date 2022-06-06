@@ -5,6 +5,7 @@ import *  as firebase from 'firebase/compat/app';
 import { AuthService } from '../shared/auth.service';
 import { ShoppingCartService } from '../shared/shopppingCart.service';
 import { Prodt } from '../models';
+import { ShoppingCart } from '../models/shopping-Cart';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { Prodt } from '../models';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit ,OnDestroy {
-  shoppingCartItemCount !:number;
+  Cart$ !:Observable<ShoppingCart>;
   user$ !:Observable<firebase.default.User | null>;
   private userSub !: Subscription;
   isAuthenticate = false;
@@ -41,14 +42,8 @@ export class HeaderComponent implements OnInit ,OnDestroy {
       }
     );
 
-    let cart$ =await this.shoppingCartService.getCart();
-    cart$.valueChanges().subscribe(
-      (cart:any) =>{
-        this.shoppingCartItemCount =0;
-        for(let ProductId in cart?.items){
-          this.shoppingCartItemCount += cart?.items[ProductId].quantity;
-        }
-      });
+    this.Cart$=await this.shoppingCartService.getCart();
+    
 
   }
  

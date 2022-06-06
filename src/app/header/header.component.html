@@ -55,8 +55,8 @@
 
           <li class="nav-item cart"  *ngIf="isAuthenticate" >
             <a class="nav-link" routerLink="/shopping-cart" >🛒
-            <span class="badge badge-warning badge-pill bg-success" style="margin-left: -7px;">
-              {{ shoppingCartItemCount }}
+            <span class="badge badge-warning badge-pill bg-success" style="margin-left: -7px;" *ngIf="Cart$ |async as cart">
+              {{ cart.totalItemCount }}
             </span>
             </a>
           </li>

@@ -12,15 +12,15 @@ export class ShoppingCartService {
     });
   }
 
-  private getCart(cartId: string) {
+   async getCart() {
+     let cartId = await  this.getOrCreateCartID();
     return this.afDB.list('/shopping-cart' + cartId);
   }
   private getItem(cartId: string, productId: string) {
     return this.afDB
-      .object('/shopping-cart/' + cartId + '/items/' + productId)
-      .valueChanges();
+      .object('/shopping-cart/' + cartId + '/items/' + productId);
   }
-  private async getOrCreateCart() {
+  private async getOrCreateCartID()  :Promise <string>{
     let CartID = localStorage.getItem('cartId');
     if (CartID) return CartID;
 
@@ -29,7 +29,7 @@ export class ShoppingCartService {
     return res.key;
   }
   async addToCart(product: pro) {
-    let cartId = await this.getOrCreateCart();
+    let cartId = await this.getOrCreateCartID();
     //    let Quantity =this.afDB.object('/shopping-cart/'+cartId + '/items/' + product.key);
 
     //     let Quantity = this.getItem(cartId,product.key);
@@ -53,18 +53,15 @@ export class ShoppingCartService {
     //     }
     // )
 
-    const item$ = this.afDB.object(
-      '/shopping-cart/' + cartId + '/items/' + product.key
-    );
+    const item$ = this.getItem(cartId,product.key);
+
     item$
       .snapshotChanges()
       .pipe(take(1))
       .subscribe((item: any) => {
-        if (item.payload.exists()) {
-          item$.update({ quantity: item.payload.val().quantity + 1 });
-        } else {
-          item$.set({ product: product, quantity: 1 });
-        }
+       
+          item$.update({product:product ,quantity: (item.payload.val().quantity || 0) + 1 });
+        
       });
   }
 }

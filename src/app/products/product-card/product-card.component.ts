@@ -11,6 +11,7 @@ import { ShoppingCartService } from 'src/app/shared/shopppingCart.service';
 export class ProductCardComponent implements OnInit {
   @Input('product') product !:pro;
   @Input('show-actions') showActoins = true;
+  @Input('shopping-cart') shoppingCart :any;
   constructor(private shopppingService:ShoppingCartService) { }
 
   ngOnInit(): void {
@@ -21,4 +22,14 @@ export class ProductCardComponent implements OnInit {
 
    
   }
+
+  getQuantity(){
+    if( !this.shoppingCart) {
+    return 0;
+    console.log('there is no items'+this.shoppingCart);
+  }
+    let item = this.shoppingCart.items[this.product.key];
+    return item ? item.quantity : 0;
+  }
+
 }

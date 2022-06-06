@@ -49,13 +49,13 @@
 
          </ng-template>
          <li class="nav-item " routerLinkActive="active">
-          <a class="nav-link text-danger mx-5 logoutLogo"  *ngIf="isAuthenticate" routerLink="/auth"  (click)="onLogout()">Log Out </a>
+          <a class="nav-link text-danger mx-3 logoutLogo"  *ngIf="isAuthenticate" routerLink="/auth"  (click)="onLogout()">Log Out </a>
         </li>
          
 
           <li class="nav-item cart"  *ngIf="isAuthenticate" >
             <a class="nav-link" routerLink="/shopping-cart" >🛒
-            <span class="badge badge-warning badge-pill">
+            <span class="badge badge-warning badge-pill bg-success" style="margin-left: -7px;">
               {{ shoppingCartItemCount }}
             </span>
             </a>

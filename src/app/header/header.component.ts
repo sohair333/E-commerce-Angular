@@ -4,6 +4,7 @@ import { authService } from '../auth/auth.service';
 import *  as firebase from 'firebase/compat/app';
 import { AuthService } from '../shared/auth.service';
 import { ShoppingCartService } from '../shared/shopppingCart.service';
+import { Prodt } from '../models';
 
 
 @Component({
@@ -42,13 +43,12 @@ export class HeaderComponent implements OnInit ,OnDestroy {
 
     let cart$ =await this.shoppingCartService.getCart();
     cart$.valueChanges().subscribe(
-      cart =>{
+      (cart:any) =>{
         this.shoppingCartItemCount =0;
         for(let ProductId in cart?.items){
-          this.shoppingCartItemCount +=cart?.items[ProductId].quantity;
+          this.shoppingCartItemCount += cart?.items[ProductId].quantity;
         }
-      }
-    );
+      });
 
   }
  

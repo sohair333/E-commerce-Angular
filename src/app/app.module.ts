@@ -65,13 +65,23 @@ import { CountDownSaleComponent } from './count-down-sale/count-down-sale.compon
 import { BestSalleingPackagesComponent } from './best-salleing-packages/best-salleing-packages.component';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
-  authDomain: "e-commerce-website-a5b86.firebaseapp.com",
-  projectId: "e-commerce-website-a5b86",
-  storageBucket: "e-commerce-website-a5b86.appspot.com",
-  messagingSenderId: "993242594375",
-  appId: "1:993242594375:web:c7938a4d4df88bd9850562",
-  measurementId: "G-ZRMMW9T3ZX"
+  // apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
+  // authDomain: "e-commerce-website-a5b86.firebaseapp.com",
+  // projectId: "e-commerce-website-a5b86",
+  // storageBucket: "e-commerce-website-a5b86.appspot.com",
+  // messagingSenderId: "993242594375",
+  // appId: "1:993242594375:web:c7938a4d4df88bd9850562",
+  // measurementId: "G-ZRMMW9T3ZX"
+
+
+  apiKey: "AIzaSyCKvfOZhLBk8PecBfEmInep4JcFb-WjCcM",
+  authDomain: "e-commerce-f1ec5.firebaseapp.com",
+  databaseURL: "https://e-commerce-f1ec5-default-rtdb.firebaseio.com",
+  projectId: "e-commerce-f1ec5",
+  storageBucket: "e-commerce-f1ec5.appspot.com",
+  messagingSenderId: "137475892671",
+  appId: "1:137475892671:web:dbf6f4c2d5e5ddc7d96d0a",
+  measurementId: "G-T7Q3PS3B6K"
 };
 
 

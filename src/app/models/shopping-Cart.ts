@@ -1,4 +1,5 @@
 
+import { pro, Product } from "../models";
 import { ShoppingCartItems } from "./shopppingCart-items";
 
 export class ShoppingCart{
@@ -10,6 +11,11 @@ export class ShoppingCart{
             this.items.push(new ShoppingCartItems(item.product,item.quantity));
         }  
       }
+    getQuantity(product:pro){
+        
+        let item = this.itemsMap[product.key];
+        return item ? item.quantity :0;
+    }  
 
     get totalPrice(){
         let sum = 0;

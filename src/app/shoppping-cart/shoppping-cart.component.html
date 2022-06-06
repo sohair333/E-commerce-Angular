@@ -15,7 +15,10 @@
             <!-- fix product render on shopping cart all products should appear -->
             <tr *ngFor="let item of cart.items">
                 <td>{{item.product.title}}</td>
-                <td>{{item.quantity}}</td>
+                <td>
+                    
+                    <!-- <product-quantity [product]="item.product" [shopping-cart]="cart" ></product-quantity> -->
+                </td>
                 <td>{{ item.totalPrice |currency:'USD':true }}</td>
             </tr>
         </tbody>

@@ -14,7 +14,7 @@ export class ShoppingCartService {
 
    async getCart() {
      let cartId = await  this.getOrCreateCartID();
-    return this.afDB.list('/shopping-cart' + cartId);
+    return this.afDB.object('/shopping-cart/' + cartId);
   }
   private getItem(cartId: string, productId: string) {
     return this.afDB

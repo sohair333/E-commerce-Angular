@@ -6,8 +6,27 @@
       <p class="card-text">{{ product.categorie }}</p>
      
     </div>
-    <div class="card-footer">
-        <button class="btn btn-danger btn-block w-100 rounded" *ngIf="showActoins" (click)="addToCart(product)" >Add To Cart</button>
-        <div *ngIf="showActoins" >{{ getQuantity() }}</div>
+    <div *ngIf="showActoins"  class="card-footer">
+        <button
+        *ngIf= "getQuantity() === 0; else updateQuantity"
+        class="btn btn-danger btn-block w-100 rounded"  (click)="addToCart(product)" >Add To Cart</button>
+        <ng-template #updateQuantity>
+          <div class="row no-gutters">
+            <div class="col-2">
+              <button class="btn btn-danger btn-block">
+                -
+              </button>
+            </div>
+            <div class="col text-center mt-2">
+              {{ getQuantity() }} in Cart
+            </div>
+            <div class="col-2" >
+              <button class="btn btn-danger btn-block">
+                +
+              </button>
+            </div>
+          </div>
+        </ng-template>
+       
     </div>
   </div>

@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { AngularFireDatabase, AngularFireObject } from '@angular/fire/compat/database';
 import { pro, Prodt } from '../models';
 import { take } from 'rxjs';
+import { ShoppingCart } from '../models/shopping-Cart';
+
 @Injectable()
 export class ShoppingCartService {
   constructor(private afDB: AngularFireDatabase) {}
@@ -12,7 +14,7 @@ export class ShoppingCartService {
     });
   }
 
-   async getCart() {
+   async getCart() :Promise<AngularFireObject <ShoppingCart>> {
      let cartId = await  this.getOrCreateCartID();
     return this.afDB.object('/shopping-cart/' + cartId);
   }

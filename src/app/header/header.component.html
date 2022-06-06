@@ -54,7 +54,11 @@
          
 
           <li class="nav-item cart"  *ngIf="isAuthenticate" >
-            <a class="nav-link" routerLink="/shopping-cart" >🛒</a>
+            <a class="nav-link" routerLink="/shopping-cart" >🛒
+            <span class="badge badge-warning badge-pill">
+              {{ shoppingCartItemCount }}
+            </span>
+            </a>
           </li>
          
          

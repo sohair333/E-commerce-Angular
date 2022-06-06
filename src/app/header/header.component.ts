@@ -3,6 +3,7 @@ import { Observable, Subscription } from 'rxjs';
 import { authService } from '../auth/auth.service';
 import *  as firebase from 'firebase/compat/app';
 import { AuthService } from '../shared/auth.service';
+import { ShoppingCartService } from '../shared/shopppingCart.service';
 
 
 @Component({
@@ -11,20 +12,18 @@ import { AuthService } from '../shared/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit ,OnDestroy {
+  shoppingCartItemCount !:number;
   user$ !:Observable<firebase.default.User | null>;
   private userSub !: Subscription;
   isAuthenticate = false;
-  constructor(private authSerivce:authService,
-    
+   constructor(private authSerivce:authService,
+   private shoppingCartService:ShoppingCartService,
     public auth:AuthService
     ) { 
       
+      
     }
 
-
-  
-
- 
   onAuthenticateMode(){
     this.isAuthenticate = !this.isAuthenticate;
   }
@@ -32,7 +31,7 @@ export class HeaderComponent implements OnInit ,OnDestroy {
     this.authSerivce.logout();
   }
 
-  ngOnInit(): void {
+ async ngOnInit() {
     this.userSub=this.authSerivce.user.subscribe(
       user =>{
         this.isAuthenticate = !!user;
@@ -40,6 +39,17 @@ export class HeaderComponent implements OnInit ,OnDestroy {
         console.log(!!user);
       }
     );
+
+    let cart$ =await this.shoppingCartService.getCart();
+    cart$.valueChanges().subscribe(
+      cart =>{
+        this.shoppingCartItemCount =0;
+        for(let ProductId in cart?.items){
+          this.shoppingCartItemCount +=cart?.items[ProductId].quantity;
+        }
+      }
+    );
+
   }
  
   ngOnDestroy(){

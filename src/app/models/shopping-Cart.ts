@@ -6,11 +6,18 @@ export class ShoppingCart{
     constructor(public  itemsMap:{[productId:string]:ShoppingCartItems}){
         for(let productId in itemsMap)
         {
-            this.items.push(itemsMap[productId]);
+            let item =itemsMap[productId];
+            this.items.push(new ShoppingCartItems(item.product,item.quantity));
         }  
       }
 
-    
+    get totalPrice(){
+        let sum = 0;
+        for(let prodtID in this.items){
+            sum += this.items[prodtID].totalPrice;
+        }
+        return sum;
+    }
     get totalItemCount(){
         let Count =0;
         for(let ProductId in this.items){

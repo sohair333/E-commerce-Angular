@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { pro } from 'src/app/models';
 import { ShoppingCartService } from 'src/app/shared/shopppingCart.service';
 
-////solve shopping cart bug path on firebase
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
@@ -25,7 +24,7 @@ export class ProductCardComponent implements OnInit {
   getQuantity() {
     if (!this.shoppingCart) {
       return 0;
-      console.log('there is no items' + this.shoppingCart);
+      
     }
     let item = this.shoppingCart.items[this.product.key];
     return item ? item.quantity : 0;

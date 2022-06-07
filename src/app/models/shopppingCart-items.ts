@@ -4,7 +4,7 @@ export class ShoppingCartItems{
     key !: string;
     title !: string;
     imageUrl !: string;
-    price!: number; 
+    price !: number; 
     categorie !:string;
     quantity!: number; 
   

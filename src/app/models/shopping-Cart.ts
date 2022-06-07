@@ -1,5 +1,5 @@
 
-import { pro, Product } from "../models";
+import { pro } from "../models";
 import { ShoppingCartItems } from "./shopppingCart-items";
 
 export class ShoppingCart{

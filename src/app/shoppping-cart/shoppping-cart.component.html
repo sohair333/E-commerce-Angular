@@ -13,13 +13,12 @@
         </thead>
         <tbody>
             <!-- fix product render on shopping cart all products should appear -->
-            <tr *ngFor="let item of cart.items">
+            <tr *ngFor= "let item of cart.items">
                 <td>{{item.title}}</td>
                 <td>
-                    
                    <app-product-quantity [product]="item" [shopping-cart]="cart"></app-product-quantity>
                 </td>
-                <td>{{ item.totalPrice |currency:'USD':true }} hi</td>
+                <td>{{ item.totalPrice |currency:'USD':true }}</td>
             </tr>
         </tbody>
         <tfoot>

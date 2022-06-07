@@ -8,7 +8,7 @@
     </div>
     <div *ngIf="showActoins"  class="card-footer" style="cursor: pointer;">
         <button
-        *ngIf = "getQuantity() === 0; else updateQuantity"
+        *ngIf= "getQuantity() === 0; else updateQuantity"
         class="btn btn-danger btn-block w-100 rounded"  (click)="addToCart()" >Add To Cart</button>
         <ng-template #updateQuantity>
           <div class="row no-gutters">

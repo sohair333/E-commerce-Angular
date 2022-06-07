@@ -16,7 +16,7 @@
         <tbody>
             <!-- fix product render on shopping cart all products should appear -->
             <tr *ngFor= "let item of cart.items">
-                <td>{{ item.title }}Room1</td>
+                <td>{{ item.title }}</td>
                 <td>{{ item.quantity}}</td>
                 <td >
                    <app-product-quantity [product]="item" [shopping-cart]="cart"></app-product-quantity>
@@ -24,7 +24,7 @@
                
                 <!--fix render product data-->
 
-                <td >{{ item.totalPrice |currency:'USD':true }}500$</td>
+                <td >{{ item.totalPrice |currency:'USD':true }}</td>
             </tr>
         </tbody>
         <tfoot>
@@ -32,7 +32,7 @@
                 <th></th>
                 <th></th>
                 <th></th>
-                <th>{{ cart.totalPrice | currency:'USD':true }}2000$</th>
+                <th>{{ cart.totalPrice | currency:'USD':true }}</th>
             </tr>
         </tfoot>
     </table>

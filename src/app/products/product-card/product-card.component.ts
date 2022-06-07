@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { pro } from 'src/app/models';
 import { ShoppingCartService } from 'src/app/shared/shopppingCart.service';
-
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',

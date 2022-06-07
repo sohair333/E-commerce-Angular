@@ -52,15 +52,6 @@ export class ShoppingCartService {
     let cartId = await this.getOrCreateCartID();
     const item$ = this.getItem(cartId,product.key);
 
-    // item$.snapshotChanges().pipe(take(1)).subscribe((item: any) => {
-    //   if(item.key != null) {
-    //     item$.update({ product: product,quantity: (item.quantity || 0) + 1});
-    //   } else {
-    //     item$.set( {product:product, quantity:1});
-    //  }   
-    // });
-
-
     item$
       .snapshotChanges()
       .pipe(take(1))

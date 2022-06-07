@@ -9,7 +9,7 @@ import { pro } from '../models';
   styleUrls: ['./shoppping-cart.component.css']
 })
 export class ShopppingCartComponent implements OnInit {
-  
+  @Input('product') product!: pro;
   Cart$ !:Observable<ShoppingCart>;
   constructor(private shopppingCartService:ShoppingCartService) { }
 

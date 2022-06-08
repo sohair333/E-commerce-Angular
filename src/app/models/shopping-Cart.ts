@@ -6,8 +6,7 @@ export class ShoppingCart{
     items :ShoppingCartItems[]=[] ;
     
     constructor(private itemsMap: { [productId: string]: ShoppingCartItems }) {
-        this.itemsMap = itemsMap || {};
-        
+        this.itemsMap = itemsMap || {} ;
         for (let productId in itemsMap) {
           let item = itemsMap[productId];
           this.items.push(new ShoppingCartItems({ ...item, key: productId }));
@@ -17,7 +16,7 @@ export class ShoppingCart{
 
     getQuantity(product:pro){
         let item = this.itemsMap[product.key];
-        return item ? item.quantity :0;
+        return item ? item.quantity : 0;
     }  
 
     get totalPrice(){

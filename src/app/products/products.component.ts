@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/shared/product.service';
 import { pro, Product } from '../models';
-
 import { switchMap } from 'rxjs/operators';
 import { ShoppingCartService } from '../shared/shopppingCart.service';
 import { Subscription } from 'rxjs';

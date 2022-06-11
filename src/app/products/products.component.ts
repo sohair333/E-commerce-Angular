@@ -5,6 +5,7 @@ import { pro, Product } from '../models';
 import { switchMap } from 'rxjs/operators';
 import { ShoppingCartService } from '../shared/shopppingCart.service';
 import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',

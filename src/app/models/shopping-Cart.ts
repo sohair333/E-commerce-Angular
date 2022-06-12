@@ -3,7 +3,7 @@ import { pro } from "../models";
 import { ShoppingCartItems } from "./shopppingCart-items";
 
 export class ShoppingCart{
-    items :ShoppingCartItems[]=[] ;
+    items:ShoppingCartItems[]=[] ;
     
     constructor(private itemsMap: { [productId: string]: ShoppingCartItems }) {
         this.itemsMap = itemsMap || {} ;

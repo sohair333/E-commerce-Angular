@@ -24,16 +24,14 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatInputModule} from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 // import { MatFormFieldModule } from '@angular/material/form-field';
 
-
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AngularFireModule } from '@angular/fire/compat';
 
@@ -53,8 +51,8 @@ import { ProductFormComponent } from './Admin/product-form/product-form.componen
 import { CategoriesService } from './shared/categories.service';
 import { ProductService } from './shared/product.service';
 // import { AdminAuthGuardService } from './shared/admin-auth-guard.service';
-import { CustomFormsModule } from 'ng2-validation'
-import { DataTablesModule  } from 'angular-datatables';
+import { CustomFormsModule } from 'ng2-validation';
+import { DataTablesModule } from 'angular-datatables';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { CarsoulProductsComponent } from './carsoul-products/carsoul-products.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
@@ -66,17 +64,18 @@ import { BestSalleingPackagesComponent } from './best-salleing-packages/best-sal
 import { ProductQuantityComponent } from './shared/product-quantity/product-quantity.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ProductSliderComponent } from './product-slider/product-slider.component';
+import { OrderService } from './shared/order.service';
+import { ShoppingCartSummaryComponent } from './shopping-cart/shopping-cart-summary/shopping-cart-summary.component';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0",
-  authDomain: "e-commerce-website-a5b86.firebaseapp.com",
-  projectId: "e-commerce-website-a5b86",
-  storageBucket: "e-commerce-website-a5b86.appspot.com",
-  messagingSenderId: "993242594375",
-  appId: "1:993242594375:web:c7938a4d4df88bd9850562",
-  measurementId: "G-ZRMMW9T3ZX"
+  apiKey: 'AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0',
+  authDomain: 'e-commerce-website-a5b86.firebaseapp.com',
+  projectId: 'e-commerce-website-a5b86',
+  storageBucket: 'e-commerce-website-a5b86.appspot.com',
+  messagingSenderId: '993242594375',
+  appId: '1:993242594375:web:c7938a4d4df88bd9850562',
+  measurementId: 'G-ZRMMW9T3ZX',
 };
-
 
 @NgModule({
   declarations: [
@@ -111,7 +110,8 @@ const firebaseConfig = {
     BestSalleingPackagesComponent,
     ProductQuantityComponent,
     GalleryComponent,
-    ProductSliderComponent
+    ProductSliderComponent,
+    ShoppingCartSummaryComponent,
   ],
   imports: [
     BrowserModule,
@@ -120,7 +120,7 @@ const firebaseConfig = {
     HttpClientModule,
     FormsModule,
     CustomFormsModule,
-    DataTablesModule, 
+    DataTablesModule,
     NgxDatatableModule,
     AppRoutingModule,
     ReactiveFormsModule,
@@ -133,10 +133,16 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgbModule
-    
+    NgbModule,
   ],
-  providers: [AuthService,UserService,CategoriesService,ProductService,ShoppingCartService],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthService,
+    UserService,
+    CategoriesService,
+    ProductService,
+    ShoppingCartService,
+    OrderService,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

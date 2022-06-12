@@ -22,6 +22,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
     activateRoute: ActivatedRoute,
     private shoppingCartServise: ShoppingCartService
   ) {
+    
+
     PService.getAll()
       .pipe(
         switchMap((products) => {

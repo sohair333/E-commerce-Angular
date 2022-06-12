@@ -15,6 +15,7 @@ import { ShoppingCart } from '../models/shopping-Cart';
 })
 export class HeaderComponent implements OnInit ,OnDestroy {
   Cart$ !:Observable<ShoppingCart>;
+  shoppingCartItemCount !:number;
   user$ !:Observable<firebase.default.User | null>;
   private userSub !: Subscription;
   isAuthenticate = false;

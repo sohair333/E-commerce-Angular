@@ -74,17 +74,19 @@ export class ShoppingCartService {
       .snapshotChanges()
       .pipe(take(1))
       .subscribe((item: any) => {
-        let Quantity = (item.payload.val().quantity || 0) + change;
-        if (Quantity === 0) {
-          item$.remove();
-        } else
-          item$.update({
-            // product:product
-            title: product.title,
-            imageUrl: product.imageUrl,
-            price: product.price,
-            quantity: Quantity,
-          });
+        // let Quantity = (item.payload.val().quantity || 0) + change;
+        // if (Quantity === 0) {
+        //   item$.remove();
+        // } else
+        //   item$.update({
+        //     // product:product
+        //     title: product.title,
+        //     imageUrl: product.imageUrl,
+        //     price: product.price,
+        //     quantity: Quantity,
+        //   });
+        
+        item$.update({product: product,quantity:(item.quantity || 0 ) + change });
       });
   }
 }

@@ -6,6 +6,7 @@
       <p class="card-text">{{ product.categorie }}</p>
      
     </div>
+    <!--fix add more product on footer product and shopping cart increase and decreas count-->
     <div *ngIf="showActoins"  class="card-footer" style="cursor: pointer;">
         <button
         *ngIf= "getQuantity() === 0; else updateQuantity"

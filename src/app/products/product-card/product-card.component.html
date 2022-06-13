@@ -1,5 +1,5 @@
 <div class="card m-3 bg-success products " *ngIf= "product.title"  style="width: 21rem">
-    <img class="card-img-top" [src]="product.imageUrl" *ngIf= "product.imageUrl" alt="{{product.title}}" />
+    <img class="card-img-top" [src]="product.imageUrl" *ngIf= "product.imageUrl" alt="{{product.title}}"  height="250px"/>
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text">{{ product.price | currency: "USD":true }}</p>

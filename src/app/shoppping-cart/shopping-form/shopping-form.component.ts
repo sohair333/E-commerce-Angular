@@ -38,4 +38,23 @@ export class ShoppingFormComponent implements OnInit {
     this.router.navigate(['/order-sucess', result.key]);
   }  
 
+  // placeOrder(){
+  //   let order = {
+  //     dataPlaced : new Date().getTime(),
+  //     shipping: this.shipping,
+  //     items:this.cart.items.map( i => {
+  //       return {
+  //         product :{
+  //           title :i.title,
+  //           imageUrl:i.imageUrl,
+  //           price:i.price
+  //         },
+  //         quantity:i.quantity,
+  //         totalPrice:i.totalPrice
+  //       }
+  //     })
+  //   };
+  //   this.orderService.storeOrder(order);
+  // }
+
 }

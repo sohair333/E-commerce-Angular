@@ -10,17 +10,17 @@ export class OrderService {
   constructor(private afDB:AngularFireDatabase,private shoppingCartService: ShoppingCartService) { }
 
   storeOrder(order:any){
-   return this.afDB.list('/my/orders').push(order);
+   return this.afDB.list('/my-orders').push(order);
   }
 
   async placeOrder(order:any) {
-    let result = await this.afDB.list('/my/orders').push(order);
+    let result = await this.afDB.list('/my-orders').push(order);
     this.shoppingCartService.clearCart();
     return result;
   }
 
   getOrders() { 
-    return this.afDB.list('/my/orders');
+    return this.afDB.list('/my-orders');
   }
   
 }

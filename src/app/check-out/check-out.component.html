@@ -5,5 +5,8 @@
   </div>
   <div class="col-6">
     <app-shopping-cart-summary [cart]="cart"></app-shopping-cart-summary>
+    <button 
+    (click)="placeOrder()"
+    class="btn btn-danger p-2 mt-2">place</button>
   </div>
 </div>

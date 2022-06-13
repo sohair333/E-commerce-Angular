@@ -34,7 +34,7 @@ const approutes: Routes = [
   {path:'gallery',component:FilterableProductsComponent,canActivate:[AuthGuard]},
   {path:'reviews',component:ReviewsComponent,canActivate:[AuthGuard]},
   {path:'shopping-cart',canActivate:[AuthGuard],component:ShopppingCartComponent},
-  {path:'order-sucess',canActivate:[AuthGuard],component:OrderSuccessComponent},
+  {path:'order-sucess/:id',canActivate:[AuthGuard],component:OrderSuccessComponent},
   {path:'admin/products',component:AdminProductsComponent,canActivate:[AuthGuard]},
   {path:'my-orders',component:MyOrdersComponent,canActivate:[AuthGuard]},
   {path:'check-out',component:CheckOutComponent,canActivate:[AuthGuard]},

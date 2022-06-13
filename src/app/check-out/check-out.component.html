@@ -1,7 +1,7 @@
 <h2 class="mt-5 p-5">Shopping Cart Check Out</h2>
 <div class="row" *ngIf= "cart">
   <div class="col-6">
-    <!-- <shipping-form [cart]="cart"></shipping-form> -->
+    <app-shopping-form [cart]="cart"></app-shopping-form>
   </div>
   <div class="col-6">
     <app-shopping-cart-summary [cart]="cart"></app-shopping-cart-summary>

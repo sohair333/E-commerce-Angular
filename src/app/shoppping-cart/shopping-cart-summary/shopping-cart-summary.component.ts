@@ -10,7 +10,6 @@ export class ShoppingCartSummaryComponent implements OnInit {
   @Input('cart') cart !: ShoppingCart;
   
   constructor() { }
-
   ngOnInit(): void {
   }
 

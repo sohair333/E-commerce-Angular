@@ -21,30 +21,21 @@
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
             <a class="nav-link"  routerLink="/testimonials">Testimonials</a>
           </li>
-          <!-- <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link" >About Us</a>
-          </li> -->
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
             <a class="nav-link" routerLink="/contactUs">Contact Us</a>
           </li>
-          <li ngbDropdown  *ngIf= "auth.user$ | async as user; else anonymousUser" class="nav-item dropdown">
+          <li ngbDropdown  *ngIf= "auth.user$ | async as user" class="nav-item dropdown">
             <a ngbDropdownToggle class="nav-link dropdown-toggle"  style="cursor:pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
             *ngIf="isAuthenticate">
               {{ user.displayName }}
             </a>
             <div  ngbDropdownMenu class="dropdown-menu" >
-              <a class="dropdown-item"  routerLink="/my/orders">My Orders</a>
+              <a class="dropdown-item"  routerLink="/my-orders">My Orders</a>
               <a class="dropdown-item"  routerLink="/admin/products">Manage Products</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item"  routerLink="/admin/orders">Manage orders</a>
             </div>
           </li>
-         <ng-template #anonymousUser>
-          <!-- <li class="nav-item " routerLinkActive="active">
-            <a class="nav-link text-danger mx-5 logoutLogo"  *ngIf="isAuthenticate" routerLink="/auth"  (click)="onLogout()">Log In </a>
-          </li> -->
-
-         </ng-template>
          <li class="nav-item " routerLinkActive="active">
           <a class="nav-link text-danger mx-3 logoutLogo"  *ngIf="isAuthenticate" routerLink="/auth"  (click)="onLogout()">Log Out </a>
         </li>

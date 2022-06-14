@@ -576,3 +576,112 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         filter: hue-rotate(360deg);
     }
 }
+.reviews{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.reviews-heading{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reviews-heading h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #202020;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+.reviews-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.reviews-box{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0,0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.profile-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.profile-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+display: flex;
+flex-direction: column;
+}
+.name-user strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color: #797979;
+    font-size: 0.8rem;
+}
+.reviews-part span svg{
+    color: #f9d71c;
+   
+}
+.box-top{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+.client-comments p{
+    font-size: .9rem;
+    color: #4d4d4d;
+}
+.reviews-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s ;
+}
+@media(max-width:1060px){
+    .reviews-box{
+        width: 45%;
+        padding: 10px;
+    }
+}
+@media(max-width:790px){
+    .reviews-box{
+        width: 100%;
+    }
+    .reviews-box h1{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews-part{
+        margin-top: 10px;
+    }
+}

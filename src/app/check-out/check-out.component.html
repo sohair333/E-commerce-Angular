@@ -2,11 +2,12 @@
 <div class="row" *ngIf= "cart">
   <div class="col-6">
     <app-shopping-form [cart]="cart"></app-shopping-form>
+    <button 
+    (click)="placeOrder()"
+    class="btn btn-danger p-2 mt-2">place Order</button>
   </div>
   <div class="col-6">
     <app-shopping-cart-summary [cart]="cart"></app-shopping-cart-summary>
-    <button 
-    (click)="placeOrder()"
-    class="btn btn-danger p-2 mt-2">place</button>
+  
   </div>
 </div>

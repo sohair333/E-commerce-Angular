@@ -10,8 +10,10 @@ export class OrderService {
 
   constructor(private afDB:AngularFireDatabase,private shoppingCartService: ShoppingCartService) { }
 
-  storeOrder(Order: unknown){
-   return this.afDB.list('/my-orders').push(2);
+ async PlaceOrder(Order: unknown){
+   let res= await this.afDB.list('/my-orders').push(2);
+  this.shoppingCartService.clearCart();
+   return res;
   }
 
   async placeOrder(order:any) {

@@ -662,6 +662,10 @@ margin-bottom: 20px;
     transform: translateY(-10px);
     transition: all ease 0.3s ;
 }
+#reviews{
+    margin-top: -100px;
+    margin-bottom: 50px;
+}
 @media(max-width:1060px){
     .reviews-box{
         width: 45%;

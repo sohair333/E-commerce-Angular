@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Item{
+  imageSrc:string;
+  imageAlt:string;
+} 
 
 @Component({
   selector: 'app-home',
@@ -9,7 +13,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-
+  data: Item[] =[
+    {
+      imageSrc:'https://img.freepik.com/free-photo/3d-rendering-beautiful-comtemporary-luxury-bedroom-suite-hotel-with-tv_105762-2071.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'1'
+    },
+    {
+      imageSrc:'https://img.freepik.com/free-photo/3d-rendering-vintage-minimal-mock-up-bedroom-scandinavian-classic-style_105762-2123.jpg?size=338&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'2'
+    },
+    {
+      imageSrc:'https://img.freepik.com/free-photo/3d-rendering-modern-dining-room-living-room-with-luxury-decor_105762-2000.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'3'
+    },
+    {
+      imageSrc:'https://img.freepik.com/free-photo/tropical-interior-design-living-room_269031-53.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'4'
+    },
+    {
+      imageSrc:'https://img.freepik.com/free-photo/interior-mock-up-living-room-with-colorful-dark-blue-armchair-3d-rendering_46483-841.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'5'
+    },
+    {
+      imageSrc:'https://img.freepik.com/free-photo/cabinet-tv-modern-living-room-with-armchair-lamp-table-flower-plant-concrete-wall-background-3d-rendering_41470-3344.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'6'
+    },
+    {
+      imageSrc:'https://img.freepik.com/free-photo/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table_105762-1783.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'7'
+    },
+    {
+      imageSrc:'https://img.freepik.com/free-photo/3d-rendering-modern-dining-room-living-room-with-luxury-decor_105762-1932.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'8'
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {

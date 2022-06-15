@@ -1,1 +1,10 @@
-<p>gallery works!</p>
+
+<div class="gallery-container">
+<div class="gallery">
+<div class="gallery-img" *ngFor= "let data of GalleryData; let i= index">
+    <img [src]= "data?.['imageSrc']" [alt]= "data?.['imageAlt']"  width="200px" heigh="300px"/>
+</div>
+
+</div>
+
+</div>

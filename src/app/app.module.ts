@@ -67,6 +67,8 @@ import { ProductSliderComponent } from './product-slider/product-slider.componen
 import { OrderService } from './shared/order.service';
 import { ShoppingCartSummaryComponent } from './shoppping-cart/shopping-cart-summary/shopping-cart-summary.component';
 import { ShoppingFormComponent } from './shoppping-cart/shopping-form/shopping-form.component';
+import { NextDirective } from './shared/next.directive';
+import { PrevDirective } from './shared/prev.directive';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0',
@@ -114,6 +116,8 @@ const firebaseConfig = {
     ProductSliderComponent,
     ShoppingCartSummaryComponent,
     ShoppingFormComponent,
+    NextDirective,
+    PrevDirective,
   ],
   imports: [
     BrowserModule,

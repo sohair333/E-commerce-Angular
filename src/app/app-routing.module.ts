@@ -19,6 +19,7 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { ProductFormComponent } from './Admin/product-form/product-form.component';
 
+import {PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const approutes: Routes = [
@@ -40,7 +41,8 @@ const approutes: Routes = [
   {path:'check-out',component:CheckOutComponent,canActivate:[AuthGuard]},
   {path:'admin/product/new',component:ProductFormComponent,canActivate:[AuthGuard]},
   {path:'admin/product/:id',component:ProductFormComponent,canActivate:[AuthGuard]},
-  {path:'admin/orders',component:AdminOrdersComponent,canActivate:[AuthGuard]}
+  {path:'admin/orders',component:AdminOrdersComponent,canActivate:[AuthGuard]},
+  {path:'page-not-found',component:PageNotFoundComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({

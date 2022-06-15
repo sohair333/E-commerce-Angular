@@ -45,6 +45,10 @@ export class HomeComponent implements OnInit {
     {
       imageSrc:'https://img.freepik.com/free-photo/3d-rendering-modern-dining-room-living-room-with-luxury-decor_105762-1932.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
       imageAlt:'8'
+    },
+    {
+      imageSrc:'https://img.freepik.com/free-photo/tv-cabinet-modern-living-room-with-blue-armchair-dark-blue-concrete-wall-background3d-rendering_41470-4627.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
+      imageAlt:'9'
     }
   ]
   constructor() { }

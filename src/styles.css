@@ -712,3 +712,164 @@ margin-bottom: 20px;
     margin-top:20px;
 
 }
+.product-slider{
+    padding:20px 0;
+    margin-bottom:200px;
+}
+.slider-wrap{
+    position:relative;
+    overflow:hidden;
+    height:150px;
+}
+.slider-main{
+    position:absolute;
+    width:200%;
+}
+.item-slider{
+    position:relative;
+    display:inline-block;
+    width:255px;
+    height:150px;
+    /* background:rgba(151,2,2); */
+    margin:0 12px;
+}
+.image-slider{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.image-slider img{
+    width:240px;
+}
+.prev{
+    position:absolute;
+    border:none;
+    border-radius:40%;
+    background-color:#cc0030;
+    color:darkred;
+    left:36px;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.next{
+    position:absolute;
+    border:none;
+    border-radius:40%;
+    background-color:#cc0030;
+    color:darkred;
+    right:-13px;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.gallery-container{
+    position:relative;
+    display:inline-block;
+    padding:25px;
+}
+.gallery-container .gallery{
+    line-height:0;
+    column-count:3;
+    column-gap:30px;
+}
+.gallery-container .gallery .gallery-img{
+    width:100%;
+    height:auto;
+    cursor:pointer;
+    cursor:zoom-in;
+    border-radius:.35rem;
+    margin-bottom:30px;
+    box-shadow:0 1px 5px 0 rgba(0,0,0,0.21);
+}
+.lightbox{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:fixed;
+    top:0;
+    left:-100px;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.2);
+}
+.count{
+    position:relative;
+    top:-160px;
+    left:100px;
+    width:7%;
+    font-weight:700;
+    height:10%;
+    color:#fff;
+    opacity:0.7;
+    font-size:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-left:5px;
+}
+.close-btn{
+    position:relative;
+    top:-185px;
+    right:-660px;
+    padding:0;
+    color:#fff;
+    background:0 0;
+    border:0;
+    cursor:pointer;
+    width:7%;
+    height:10%;
+    z-index:2;
+}
+.btn-lightbox-carsoul{
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1;
+    width:8%;
+    height:8%;
+    padding:0;
+    color:#fff;
+    text-align:center;
+    background:0 0;
+    border:0;
+    cursor:pointer;
+}
+.btn-prev{
+    left:300px;
+}
+.btn-next{
+    right:100px;
+}
+.lightbox-img img{
+    width:100%;
+    border-radius:10px;
+}
+@media screen and  (max-width:1024px){
+    .gallery-container .gallery{
+        column-count: 2;
+        width: 100%;
+    }
+    .gallery-img img{
+        width: 100%;
+    }
+}
+@media screen and  (max-width:800px){
+    .gallery-container .gallery{
+        column-count: 2;
+        
+    }
+    .gallery-img img{
+        max-width: 100%;
+    }
+}
+@media screen and  (max-width:650px){
+    .gallery-container .gallery{
+        column-count: 1;
+     
+    }
+    .gallery-img img{
+        width: 100%;
+    }
+}
+

@@ -12,7 +12,7 @@ interface Item{
  
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('scroll') scroll !:ElementRef ;
+  @ViewChild('scroll', {static: false}) scroll !:ElementRef ;
 
   data: Item[] =[
     {
@@ -56,9 +56,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  scrollToTop(){
+  public  scrollToTop(event:Event) : void{
+    if (event) {
+      event.preventDefault();
+    }
+    console.log(this.scroll);
+    console.log(this.scroll.nativeElement);
     // this.scroll.nativeElement.scrollTop = this.scroll.nativeElement.scrollHeight;
-    this.scroll.nativeElement.scrollTop =0;
+    this.scroll.nativeElement.scrollIntoView(0, 0);
   }
 
 }

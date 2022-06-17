@@ -6,6 +6,7 @@ import { AuthService } from '../shared/auth.service';
 import { ShoppingCartService } from '../shared/shopppingCart.service';
 import { Prodt } from '../models';
 import { ShoppingCart } from '../models/shopping-Cart';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-header',
@@ -17,13 +18,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   shoppingCartItemCount!: number;
   user$!: Observable<firebase.default.User | null>;
   private userSub!: Subscription;
+  // isChecked:boolean = false;
   isAuthenticate = false;
+  // mode:string='';
   constructor(
     private authSerivce: authService,
     private shoppingCartService: ShoppingCartService,
     public auth: AuthService
   ) {}
-
+ 
   onAuthenticateMode() {
     this.isAuthenticate = !this.isAuthenticate;
   }
@@ -44,5 +47,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.userSub.unsubscribe();
   }
+  
   
 }

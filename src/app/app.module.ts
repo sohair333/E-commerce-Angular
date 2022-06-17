@@ -24,7 +24,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatCardModule} from '@angular/material/card';
 // import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MatSelectModule } from '@angular/material/select';
@@ -47,15 +48,13 @@ import { ProductFormComponent } from './Admin/product-form/product-form.componen
 import { CategoriesService } from './shared/categories.service';
 import { ProductService } from './shared/product.service';
 // import { AdminAuthGuardService } from './shared/admin-auth-guard.service';
+import {MatIconModule} from '@angular/material/icon';
 import { CustomFormsModule } from 'ng2-validation';
 import { DataTablesModule } from 'angular-datatables';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { CarsoulProductsComponent } from './carsoul-products/carsoul-products.component';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './products/product-card/product-card.component';
 import { ShoppingCartService } from './shared/shopppingCart.service';
-import { CountDownSaleComponent } from './count-down-sale/count-down-sale.component';
-import { BestSalleingPackagesComponent } from './best-salleing-packages/best-salleing-packages.component';
 import { ProductQuantityComponent } from './shared/product-quantity/product-quantity.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ProductSliderComponent } from './product-slider/product-slider.component';
@@ -101,11 +100,7 @@ const firebaseConfig = {
     AdminProductsComponent,
     AdminOrdersComponent,
     ProductFormComponent,
-    CarsoulProductsComponent,
-    ProductFilterComponent,
     ProductCardComponent,
-    CountDownSaleComponent,
-    BestSalleingPackagesComponent,
     ProductQuantityComponent,
     GalleryComponent,
     ProductSliderComponent,
@@ -114,6 +109,9 @@ const firebaseConfig = {
     NextDirective,
     PrevDirective,
     NewProductsComponent,
+    ProductFilterComponent
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -131,7 +129,10 @@ const firebaseConfig = {
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
+    MatIconModule,
     MatSelectModule,
+    MatCardModule,
+    MatSlideToggleModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,

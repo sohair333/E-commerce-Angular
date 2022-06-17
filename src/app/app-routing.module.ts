@@ -4,7 +4,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { FilterableProductsComponent } from './filterable-products/filterable-products.component';
+
 import { HomeComponent } from './home/home.component';
 import { DetailsProductsComponent } from './products/details-products/details-products.component';
 
@@ -32,7 +32,7 @@ const approutes: Routes = [
   {path:'auth',component:AuthComponent},
   {path:'testimonials',component:TestimonialsComponent,canActivate:[AuthGuard]},
   {path:'contactUs',component:ContactUsComponent,canActivate:[AuthGuard]},
-  {path:'gallery',component:FilterableProductsComponent,canActivate:[AuthGuard]},
+  
   {path:'reviews',component:ReviewsComponent,canActivate:[AuthGuard]},
   {path:'shopping-cart',canActivate:[AuthGuard],component:ShopppingCartComponent},
   {path:'order-sucess/:id',canActivate:[AuthGuard],component:OrderSuccessComponent},

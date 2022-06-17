@@ -63,6 +63,7 @@ import { ShoppingFormComponent } from './shoppping-cart/shopping-form/shopping-f
 import { NextDirective } from './shared/next.directive';
 import { PrevDirective } from './shared/prev.directive';
 import { NewProductsComponent } from './new-products/new-products.component';
+import { BestSellingPackageComponent } from './best-selling-package/best-selling-package.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0',
@@ -107,7 +108,8 @@ const firebaseConfig = {
     NextDirective,
     PrevDirective,
     NewProductsComponent,
-    ProductFilterComponent
+    ProductFilterComponent,
+    BestSellingPackageComponent
     
     
   ],

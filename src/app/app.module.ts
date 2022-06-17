@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -17,13 +15,11 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ShopppingCartComponent } from './shoppping-cart/shoppping-cart.component';
 import { BackToTopComponent } from './back-to-top/back-to-top.component';
-
 import { DetailsProductsComponent } from './products/details-products/details-products.component';
 import { AlertComponent } from './shared/alert/alert.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -58,7 +54,6 @@ import { CarsoulProductsComponent } from './carsoul-products/carsoul-products.co
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './products/product-card/product-card.component';
 import { ShoppingCartService } from './shared/shopppingCart.service';
-import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { CountDownSaleComponent } from './count-down-sale/count-down-sale.component';
 import { BestSalleingPackagesComponent } from './best-salleing-packages/best-salleing-packages.component';
 import { ProductQuantityComponent } from './shared/product-quantity/product-quantity.component';
@@ -109,7 +104,6 @@ const firebaseConfig = {
     CarsoulProductsComponent,
     ProductFilterComponent,
     ProductCardComponent,
-    DarkModeComponent,
     CountDownSaleComponent,
     BestSalleingPackagesComponent,
     ProductQuantityComponent,

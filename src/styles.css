@@ -3,22 +3,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fredoka:wght@300;400&family=Indie+Flower&family=Lobster&family=Macondo&family=Ms+Madi&family=Nunito:wght@200;300;400&family=Pacifico&family=Playfair+Display:ital@0;1&family=Poppins:ital,wght@0,200;1,200&family=Redressed&family=Roboto:ital,wght@0,100;0,300;1,300&family=Sansita+Swashed:wght@300&family=Source+Code+Pro:ital,wght@1,300&family=Source+Sans+Pro:ital,wght@0,200;0,400;1,300;1,400&family=Varela&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fredoka:wght@300;400&family=Indie+Flower&family=Lobster&family=Macondo&family=Ms+Madi&family=Nunito:wght@200;300;400&family=Pacifico&family=Playfair+Display:ital@0;1&family=Poppins:ital,wght@0,200;1,200&family=Redressed&family=Roboto:ital,wght@0,100;0,300;1,300&family=Sansita+Swashed:wght@300&family=Source+Code+Pro:ital,wght@1,300&family=Source+Sans+Pro:ital,wght@0,200;0,400;1,300;1,400&family=Varela&display=swap");
 
-body,
-html,
+
 :root {
   width: 100%;
   width: 100%;
   box-sizing: border-box;
+  --second-color:#ac7a48;
+}
+[data-theme="dark"]{
+    --primary-bg:black;
 }
 .logo {
-  /* width: 50%; */
   mix-blend-mode: multiply;
 }
 body {
   margin-top: 50px;
   margin: 0;
   padding: 0;
-  background-color: #ac7a48;
+  background-color: var(--second-color);
 }
 .components {
   margin-top: 100px !important;
@@ -874,7 +876,8 @@ body {
 }
 .product-item-text{
     text-align: center;
-    padding-top: 22px;
+    padding-top: 0px;
+    margin-top: -50px;
 }
 .product-item-text h6 a{
     font-size: 14px;
@@ -958,3 +961,6 @@ body {
 
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

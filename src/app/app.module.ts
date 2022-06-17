@@ -14,7 +14,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ShopppingCartComponent } from './shoppping-cart/shoppping-cart.component';
-import { BackToTopComponent } from './back-to-top/back-to-top.component';
 import { DetailsProductsComponent } from './products/details-products/details-products.component';
 import { AlertComponent } from './shared/alert/alert.component';
 import { FooterComponent } from './footer/footer.component';
@@ -88,7 +87,6 @@ const firebaseConfig = {
     HomeComponent,
     PageNotFoundComponent,
     ShopppingCartComponent,
-    BackToTopComponent,
     ProductCardComponent,
     DetailsProductsComponent,
     AlertComponent,

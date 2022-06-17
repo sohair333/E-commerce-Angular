@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 interface Item{
   imageSrc:string;
@@ -12,6 +12,7 @@ interface Item{
  
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('scroll') scroll !:ElementRef ;
 
   data: Item[] =[
     {
@@ -54,6 +55,10 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  scrollToTop(){
+    // this.scroll.nativeElement.scrollTop = this.scroll.nativeElement.scrollHeight;
+    this.scroll.nativeElement.scrollTop =0;
   }
 
 }

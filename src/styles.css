@@ -956,7 +956,13 @@ body {
 .product-hover li:nth-child(4){
     transition: all 0.4s ease 0.35s;
 }
-
+.scrolling-top{
+  position: absolute;
+  margin-top: -140px;
+  right: 60px;
+  
+  
+}
 
 
 

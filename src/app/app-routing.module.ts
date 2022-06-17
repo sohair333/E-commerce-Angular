@@ -20,6 +20,8 @@ import { CheckOutComponent } from './check-out/check-out.component';
 import { ProductFormComponent } from './Admin/product-form/product-form.component';
 
 import {PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { BestSellingPackageComponent } from './best-selling-package/best-selling-package.component';
 
 
 const approutes: Routes = [
@@ -32,7 +34,8 @@ const approutes: Routes = [
   {path:'auth',component:AuthComponent},
   {path:'testimonials',component:TestimonialsComponent,canActivate:[AuthGuard]},
   {path:'contactUs',component:ContactUsComponent,canActivate:[AuthGuard]},
-  
+  {path:"gallery",component:GalleryComponent,canActivate:[AuthGuard]},
+  {path:'best-selling-packages',component:BestSellingPackageComponent,canActivate:[AuthGuard]},
   {path:'reviews',component:ReviewsComponent,canActivate:[AuthGuard]},
   {path:'shopping-cart',canActivate:[AuthGuard],component:ShopppingCartComponent},
   {path:'order-sucess/:id',canActivate:[AuthGuard],component:OrderSuccessComponent},

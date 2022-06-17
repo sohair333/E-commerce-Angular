@@ -963,7 +963,32 @@ body {
   
   
 }
-
+.product-top img{
+  cursor: pointer;
+  margin-top: 40px;
+  border-radius: 25px;
+}
+.product-top img:hover{
+  opacity: .7;
+}
+.product-top .details{
+  margin-left: -190px;
+  position: absolute;
+  margin-top: 150px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  opacity: 0;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 999;
+}
+.product-top:hover .details{
+ opacity: 1;
+ z-index: 9999;
+}
 
 
 

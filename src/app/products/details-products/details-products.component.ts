@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsProductsComponent implements OnInit {
   images: any[] = [];
+  preview:any='';
   constructor() {}
 
   ngOnInit(): void {}
@@ -35,5 +36,9 @@ export class DetailsProductsComponent implements OnInit {
       }
     }
     
+  }
+  displayImage(item:number){
+    this.preview = this.images[item]
+
   }
 }

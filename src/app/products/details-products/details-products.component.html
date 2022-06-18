@@ -14,8 +14,8 @@
       </div>
     </div>
     <div class="d-flex justify-content-end align-items-center p-4">
-      <mat-icon>arrow_back</mat-icon>
-      <mat-icon>arrow_forward</mat-icon>
+      <button [disabled]="!preview  ||imageIndex == 0" (click)="prev()" class="btn btn-danger" ><mat-icon>arrow_back</mat-icon></button>
+      <button [disabled]="!preview  || imageIndex == (images.length -1)" (click)="next()" class="btn btn-danger"><mat-icon>arrow_forward</mat-icon></button>
     </div>
   </div>
 </div>

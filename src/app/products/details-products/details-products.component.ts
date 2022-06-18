@@ -55,4 +55,14 @@ export class DetailsProductsComponent implements OnInit {
     }
     
   }
+  prev(){
+    --this.imageIndex;
+    this.preview = this.images[this.imageIndex];
+  }
+  next(){
+   
+    ++this.imageIndex;
+    this.preview = this.images[this.imageIndex];
+
+  }
 }

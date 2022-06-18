@@ -989,7 +989,16 @@ body {
  opacity: 1;
  z-index: 9999;
 }
+.box-slider{
+  margin-left: 5%  !important;
+  margin-top: 10% !important;
+  margin-bottom: 10% !important;
 
+  
+}
+.box-slider .review{
+  margin-left: 350px;
+}
 
 
 

@@ -1,1 +1,20 @@
-
+<div class="box-slider">
+  <button class="btn btn-danger delete">X</button>
+  <div class="sliderBOx">
+    <div class="previewbox">
+      <img  class="review"src="https://res.cloudinary.com/itjewelers-llc/image/upload/v1575105193/marla/HomePage/loader.gif" alt="" id="preview" />
+    </div>
+    <hr />
+    <div class="slider">
+      <div class="uploadbtn">
+        <label  *ngIf="images.length <5 "for="upload" class="btn btn-success">+</label>
+        <img *ngFor= "let image of images;let index=index" src="{{image}}" width="220px" height="200px" style="display: inline-block;margin-left: 100px;">
+        <input type="file" name="" id="upload" hidden (change)="UploadImages($event)" multiple>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end align-items-center p-4">
+      <mat-icon>arrow_back</mat-icon>
+      <mat-icon>arrow_forward</mat-icon>
+    </div>
+  </div>
+</div>

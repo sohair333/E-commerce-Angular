@@ -990,14 +990,19 @@ body {
  z-index: 9999;
 }
 .box-slider{
-  margin-left: 5%  !important;
+  margin-left: 22%  !important;
   margin-top: 10% !important;
   margin-bottom: 10% !important;
+  width:500px !important;
 
   
 }
 .box-slider .review{
-  margin-left: 350px;
+  margin-left:350px;
+}
+.box-slider button{
+  border-radius: 20px;
+  margin: 10px;
 }
 
 

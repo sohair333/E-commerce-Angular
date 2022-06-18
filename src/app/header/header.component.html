@@ -13,10 +13,6 @@
             <a class="nav-link"  routerLink="/products">Our Produsts</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
-            <a class="nav-link"  routerLink="/best-selling-packages">Gallery</a>
-          </li>
-          
-          <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
             <a class="nav-link"  routerLink="/testimonials">Testimonials</a>
           </li>
           <li class="nav-item" *ngIf="isAuthenticate" routerLinkActive="active">
@@ -28,7 +24,7 @@
               {{ user.displayName }}
             </a>
             <div  ngbDropdownMenu class="dropdown-menu" >
-              <a class="dropdown-item"  routerLink="/my-orders">My Orders</a>
+              
               <a class="dropdown-item"  routerLink="/admin/products">Manage Products</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item"  routerLink="/admin/orders">Manage orders</a>
@@ -46,11 +42,7 @@
             </span>
             </a>
           </li>
-          <!-- <li class="nav-item" *ngIf="isAuthenticate">
-            <a class="nav-link mx-5 mt-1" style="cursor: pointer;">
-              💡
-            </a>
-          </li> -->
+         
       
          
          

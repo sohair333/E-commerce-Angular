@@ -28,18 +28,6 @@ export class HomeComponent implements OnInit {
       imageAlt:'3'
     },
     {
-      imageSrc:'https://img.freepik.com/free-photo/tropical-interior-design-living-room_269031-53.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
-      imageAlt:'4'
-    },
-    {
-      imageSrc:'https://img.freepik.com/free-photo/interior-mock-up-living-room-with-colorful-dark-blue-armchair-3d-rendering_46483-841.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
-      imageAlt:'5'
-    },
-    {
-      imageSrc:'https://img.freepik.com/free-photo/cabinet-tv-modern-living-room-with-armchair-lamp-table-flower-plant-concrete-wall-background-3d-rendering_41470-3344.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
-      imageAlt:'6'
-    },
-    {
       imageSrc:'https://img.freepik.com/free-photo/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table_105762-1783.jpg?size=626&ext=jpg&ga=GA1.2.723611363.1645353369',
       imageAlt:'7'
     },

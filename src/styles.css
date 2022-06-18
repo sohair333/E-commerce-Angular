@@ -906,15 +906,15 @@ body {
 .product-hover li:last-child{
     margin-right: 0;
 }
-.product-hover li a svg{
+.product-hover li a img{
     top: 100px;
     opacity: 0;
 }
-.product-hover:hover li a svg {
+.product-hover:hover li a img {
     opacity: 1;
     top: 0px;
 }
-.product-hover li:hover a svg{
+.product-hover li:hover a img{
    
     transform: rotate(360deg);
 }
@@ -930,7 +930,7 @@ body {
     box-shadow: 0 0 25px rgba(24, 24, 24, 0.4);
     transition: all 0.5s ;   
 }
-.product-hover li a svg{
+.product-hover li a img{
     position: relative;
     display: inline-block;
     transform: rotate(0);

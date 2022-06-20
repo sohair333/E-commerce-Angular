@@ -25,7 +25,7 @@ import { BestSellingPackageComponent } from './best-selling-package/best-selling
 
 
 const approutes: Routes = [
-  {path:'',redirectTo:'/home',pathMatch:'full'},
+  {path:'',redirectTo:'/auth',pathMatch:'full'},
   {path:'home',component:HomeComponent,canActivate:[AuthGuard]}, 
   {path:'products',component:ProductsComponent,children:[
     {path:'',component:ProductsComponent},

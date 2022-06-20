@@ -64,6 +64,7 @@ import { NextDirective } from './shared/next.directive';
 import { PrevDirective } from './shared/prev.directive';
 import { NewProductsComponent } from './new-products/new-products.component';
 import { BestSellingPackageComponent } from './best-selling-package/best-selling-package.component';
+import { BrandsComponent } from './brands/brands.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyC1CxOyoPfxewVfGZ2JzgFVHIkO3hqfoA0',
@@ -109,7 +110,8 @@ const firebaseConfig = {
     PrevDirective,
     NewProductsComponent,
     ProductFilterComponent,
-    BestSellingPackageComponent
+    BestSellingPackageComponent,
+    BrandsComponent
     
     
   ],

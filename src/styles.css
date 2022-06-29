@@ -1004,8 +1004,51 @@ body {
   border-radius: 20px;
   margin: 10px;
 }
-
-
+.client-wrap{
+  width:90%;
+  height: auto;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.client-wrap h2{
+  font-size: 60px;
+  color: #555;
+}
+.client-wrap hr{
+  width: 35%;
+  height: 4px;
+  background: red;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.client-brands{
+  width: 100%;
+  height: auto;
+}
+.client-brands ul{
+  padding: 0;
+  margin: 0;
+}
+.client-brands ul li{
+  list-style: none;
+  display: inline-block;
+  height: 100px;
+  width: 150px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  box-shadow: 0px 0px 0px -7px #777;
+  margin: 10px;
+}
+.client-brands ul li img{
+  width: 100%;
+  height: 100%;
+}
+.client-brands ul li img:hover{
+ transform: scale(1.2);
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -31,9 +31,12 @@ export class  AuthComponent{
     }
     
     onSubmit(form :NgForm){
-        // console.log(form.value);
+        console.log(form.value);
+        console.log('hello');
         if(!form.valid){
+            console.log('hello');
             return;
+            
         }
         const email = form.value.email;
         const password = form.value.password;
@@ -49,10 +52,11 @@ export class  AuthComponent{
         
         AuthObs.subscribe(
             resData => {
+                console.log('hiii');
                 console.log(resData);
                 this.isLoading= false;
                 this.router.navigate(['./home']);
-               
+                
               },
               ErrorMsg => {
                 console.log(ErrorMsg);

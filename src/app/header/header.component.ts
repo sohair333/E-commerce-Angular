@@ -43,6 +43,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     this.Cart$ = await this.shoppingCartService.getCart();
   }
+ 
 
   ngOnDestroy() {
     this.userSub.unsubscribe();
